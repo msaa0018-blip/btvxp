@@ -1,514 +1,591 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEXPAR - Grupo Industrial Extingue S.A. de C.V.</title>
-    <style>
-        :root {
-            --primary: #121824;
-            --accent: #d32f2f;
-            --accent-dark: #b71c1c;
-            --text-main: #2c3e50;
-            --text-muted: #606f7b;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
-            --white: #ffffff;
-        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-        }
+<title>VEXPAR OPERACIONES</title>
 
-        /* Top Bar */
-        .top-bar {
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 0.85rem;
-            padding: 8px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .top-bar span {
-            opacity: 0.9;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* Header / Navbar */
-        header {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
+<style>
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: 1px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+html{
+scroll-behavior:smooth;
+}
 
-        .logo span {
-            color: var(--accent);
-        }
+body{
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
+background:white;
+color:#111;
+overflow-x:hidden;
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
+}
 
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+header{
 
-        .btn-quote {
-            background-color: var(--accent);
-            color: var(--white) !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 600 !important;
-            transition: background-color 0.2s !important;
-        }
+position:fixed;
+width:100%;
+top:0;
+left:0;
 
-        .btn-quote:hover {
-            background-color: var(--accent-dark) !important;
-        }
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #1a233a 100%);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+padding:25px 8%;
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #ff6b6b);
-        }
+background:rgba(255,255,255,.85);
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+backdrop-filter:blur(20px);
 
-        .hero h1 {
-            font-size: 2.75rem;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
+z-index:999;
 
-        .hero p {
-            font-size: 1.15rem;
-            opacity: 0.85;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
+}
 
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+header img{
 
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+height:45px;
 
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
+}
 
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
+nav a{
 
-        /* Cards Grid */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+text-decoration:none;
+color:#111;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
 
-        .card {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2.5rem 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-        }
+}
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
+nav a:hover{
 
-        .card-icon {
-            width: 48px;
-            height: 48px;
-            background-color: rgba(211, 47, 47, 0.1);
-            color: var(--accent);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
+opacity:.55;
 
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
+}
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
+.hero{
 
-        .spec-tag {
-            display: inline-block;
-            background: var(--bg-light);
-            border: 1px solid var(--border-color);
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: monospace;
-            color: var(--accent);
-            font-weight: 600;
-        }
+height:100vh;
 
-        /* Technical Table Section */
-        .table-section {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2.5rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
-        }
+display:flex;
 
-        .table-section h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
+align-items:center;
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
+justify-content:center;
 
-        th, td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.95rem;
-        }
+text-align:center;
 
-        th {
-            background-color: var(--bg-light);
-            color: var(--primary);
-            font-weight: 600;
-        }
+background:
 
-        tr:hover td {
-            background-color: rgba(248, 250, 252, 0.5);
-        }
+linear-gradient(rgba(255,255,255,.78),
+rgba(255,255,255,.78)),
 
-        /* Capabilities & Software Highlights */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+url("https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=80");
 
-        @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+background-size:cover;
 
-        .feature-box {
-            background: var(--white);
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
+background-position:center;
 
-        .feature-box h4 {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-        }
+padding:40px;
 
-        .feature-box p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+}
 
-        .code-box {
-            background: var(--primary);
-            color: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            border: 1px solid #2d3748;
-        }
+.hero h1{
 
-        .code-box span {
-            color: #f687b3;
-        }
+font-size:72px;
 
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-            border-top: 1px solid #1a233a;
-        }
+font-weight:800;
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
+letter-spacing:-3px;
 
-        .footer-col h4 {
-            font-size: 1.1rem;
-            margin-bottom: 1.2rem;
-            color: var(--white);
-        }
+margin-bottom:20px;
 
-        .footer-col p, .footer-col li a {
-            color: #a0aec0;
-            font-size: 0.9rem;
-            text-decoration: none;
-            line-height: 1.8;
-        }
+}
 
-        .footer-col ul {
-            list-style: none;
-        }
+.hero p{
 
-        .footer-col li a:hover {
-            color: var(--white);
-        }
+font-size:22px;
 
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid #2d3748;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #718096;
-        }
-    </style>
+max-width:900px;
+
+margin:auto;
+
+color:#555;
+
+line-height:1.7;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 42px;
+
+border-radius:50px;
+
+background:#111;
+
+color:white;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+section{
+
+padding:120px 10%;
+
+}
+
+h2{
+
+font-size:48px;
+
+margin-bottom:25px;
+
+}
+
+.subtitle{
+
+color:#777;
+
+font-size:20px;
+
+max-width:850px;
+
+line-height:1.8;
+
+margin-bottom:70px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+padding:45px;
+
+border-radius:20px;
+
+background:#fafafa;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 30px 60px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+margin-bottom:18px;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.number{
+
+font-size:58px;
+
+font-weight:800;
+
+}
+
+.gray{
+
+background:#f6f6f6;
+
+}
+
+.clients{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+.client{
+
+padding:18px 30px;
+
+border-radius:40px;
+
+background:white;
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+font-weight:600;
+
+}
+
+footer{
+
+padding:80px;
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <span>Representación Legal: Ing. Verónica Alejandrina Páramo Frausto</span>
-        <span>Suministros Industriales y Sistemas de Supresión</span>
-    </div>
+<header>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">VEX<span>PAR</span></a>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo Técnico</a></li>
-                <li><a href="#capacidades">Capacidades MRO</a></li>
-                <li><a href="#contacto" class="btn-quote">Cotización Corporativa</a></li>
-            </ul>
-        </div>
-    </header>
+<img src="https://raw.githubusercontent.com/msaa0018-blip/vexpar/main/LOGO%20VEXPAR.jpg">
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Ingeniería Avanzada en Protección contra Incendios</h1>
-            <p>Grupo Industrial Extingue S.A. de C.V. — Soluciones integrales, cumplimiento normativo y componentes de alta especificación técnica para la continuidad operativa de su industria.</p>
-        </div>
-    </section>
+<nav>
 
-    <!-- Main Container -->
-    <div class="container">
+<a href="#empresa">Empresa</a>
 
-        <!-- Section: Catálogo / Soluciones -->
-        <div class="section-title" id="catalogo">
-            <h2>Especialidades y Suministros Críticos</h2>
-            <p>Componentes certificados bajo estrictos estándares internacionales de ingeniería</p>
-        </div>
+<a href="#servicios">Servicios</a>
 
-        <div class="grid-3">
-            <div class="card">
-                <div class="card-icon">01</div>
-                <h3>Sistemas de Supresión</h3>
-                <p>Provisión, mantenimiento y componentes críticos para sistemas fijos de supresión de agentes limpios y químicos secos orientados a riesgos mayores.</p>
-                <div class="spec-tag">ANSUL 304700012</div>
-            </div>
+<a href="#clientes">Clientes</a>
 
-            <div class="card">
-                <div class="card-icon">02</div>
-                <h3>Regulación y Control</h3>
-                <p>Dispositivos de alta precisión para el monitoreo y control de líneas de gas, presión y sistemas contra incendio industriales.</p>
-                <div class="spec-tag">Kidde Fenwal 38-509830-001</div>
-            </div>
+<a href="#contacto">Contacto</a>
 
-            <div class="card">
-                <div class="card-icon">03</div>
-                <h3>Compliance & MRO</h3>
-                <p>Gestión integral de requerimientos técnicos para concursos públicos y privados, asegurando trazabilidad y cumplimiento legal absoluto.</p>
-                <div class="spec-tag">Normas NFPA / UL / FM</div>
-            </div>
-        </div>
+</nav>
 
-        <!-- Technical Specification Table -->
-        <div class="table-section">
-            <h3>Matriz de Referencia y Componentes Industriales</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Categoría de Suministro</th>
-                        <th>Descripción Técnica y Aplicación</th>
-                        <th>Estándar / Componente OEM</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Sistemas de Supresión</strong></td>
-                        <td>Contenedor piloto y elementos de disparo para sistemas automáticos de agentes limpios.</td>
-                        <td><code>ANSUL 304700012</code></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Control de Presión</strong></td>
-                        <td>Regulidores de presión de alta resistencia para redes de control neumático y contra incendio.</td>
-                        <td><code>Kidde Fenwal 38-509830-001</code></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Adquisiciones MRO</strong></td>
-                        <td>Homologación de partidas y gestión de requerimientos técnicos complejos para licitaciones.</td>
-                        <td>Procesos de Concurso Abierto PMX / Industrial</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+</header>
 
-        <!-- Section: Capacidades / Software -->
-        <div class="section-title" id="capacidades">
-            <h2>Capacidades Operativas y Tecnología</h2>
-            <p>Infraestructura interna orientada a la eficiencia y el control riguroso de proyectos</p>
-        </div>
+<section class="hero">
 
-        <div class="features-grid">
-            <div class="feature-box">
-                <h4>Cumplimiento Normativo y Licitaciones</h4>
-                <p>Experiencia contrastada en la gestión de documentación legal, técnica y administrativa para concursos complejos de gran escala en el sector industrial.</p>
-            </div>
-            <div class="feature-box">
-                <h4>Gestión ERP Propietaria (ALLIN)</h4>
-                <p>Arquitectura de software interna optimizada para el control de órdenes de compra, flujos de autorización y trazabilidad de componentes críticos.</p>
-                <div class="code-box">
-                    <span>// Módulo ERP ALLIN</span><br>
-                    Status: Active | Traceability: 100% | Auth_Level: Authorized
-                </div>
-            </div>
-        </div>
+<div>
 
-    </div>
+<h1>VEXPAR OPERACIONES</h1>
 
-    <!-- Footer -->
-    <footer id="contacto">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Grupo Industrial Extingue S.A. de C.V.</h4>
-                <p>VEXPAR ofrece soluciones de ingeniería especializadas, garantizando la seguridad industrial y la continuidad operativa corporativa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Representación Legal</h4>
-                <p><strong>Ing. Verónica Alejandrina Páramo Frausto</strong><br>Representante Legal y Dirección General</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo Técnico</a></li>
-                    <li><a href="#capacidades">Capacidades MRO</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Grupo Industrial Extingue S.A. de C.V. (VEXPAR). Todos los derechos reservados.</p>
-        </div>
-    </footer>
+<p>
+
+Ingeniería, mantenimiento y soluciones industriales para la infraestructura energética de México.
+
+</p>
+
+<a class="btn" href="#empresa">
+
+Conocer más
+
+</a>
+
+</div>
+
+</section>
+
+<section id="empresa">
+
+<h2>Experiencia</h2>
+
+<p class="subtitle">
+
+Somos una empresa enfocada en desarrollar soluciones de ingeniería,
+mantenimiento y servicios especializados para proyectos industriales
+de alta exigencia.
+
+Nuestro compromiso es ofrecer seguridad,
+calidad y cumplimiento en cada proyecto.
+
+</p>
+
+<div class="stats">
+
+<div>
+
+<div class="number">15+</div>
+
+Años de experiencia
+
+</div>
+
+<div>
+
+<div class="number">300+</div>
+
+Proyectos
+
+</div>
+
+<div>
+
+<div class="number">120+</div>
+
+Clientes
+
+</div>
+
+<div>
+
+<div class="number">24/7</div>
+
+Atención
+
+</div>
+
+</div>
+
+</section>
+
+<section class="gray">
+
+<h2>Misión</h2>
+
+<p class="subtitle">
+
+Proporcionar soluciones industriales de alto valor mediante ingeniería,
+tecnología e innovación, garantizando seguridad,
+calidad y eficiencia en cada proyecto.
+
+</p>
+
+<h2>Visión</h2>
+
+<p class="subtitle">
+
+Ser una empresa líder en servicios industriales para el sector energético,
+reconocida por su excelencia técnica,
+innovación y compromiso con nuestros clientes.
+
+</p>
+
+</section>
+
+<section id="servicios">
+
+<h2>Servicios</h2>
+
+<p class="subtitle">
+
+Capacidad técnica para atender proyectos industriales de cualquier escala.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Ingeniería Industrial</h3>
+
+Diseño, integración, supervisión y desarrollo de proyectos.
+
+</div>
+
+<div class="card">
+
+<h3>Mantenimiento</h3>
+
+Preventivo, correctivo y predictivo.
+
+</div>
+
+<div class="card">
+
+<h3>Automatización</h3>
+
+PLC, SCADA e instrumentación industrial.
+
+</div>
+
+<div class="card">
+
+<h3>Obra Electromecánica</h3>
+
+Instalaciones industriales de alta calidad.
+
+</div>
+
+<div class="card">
+
+<h3>Servicios Especializados</h3>
+
+Personal altamente capacitado para proyectos críticos.
+
+</div>
+
+<div class="card">
+
+<h3>Gestión de Proyectos</h3>
+
+Planeación, ejecución y seguimiento integral.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="clientes" class="gray">
+
+<h2>Clientes</h2>
+
+<p class="subtitle">
+
+Empresas e instituciones que han confiado en nuestros servicios.
+
+</p>
+
+<div class="clients">
+
+<div class="client">PEMEX</div>
+
+<div class="client">IBERDROLA</div>
+
+<div class="client">ICA FLOUR</div>
+
+<div class="client">CENAGAS</div>
+
+<div class="client">CENAM</div>
+
+<div class="client">JUDEL</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>¿Por qué elegir VEXPAR?</h2>
+
+<div class="grid">
+
+<div class="card">
+
+Seguridad Operacional
+
+</div>
+
+<div class="card">
+
+Ingeniería Especializada
+
+</div>
+
+<div class="card">
+
+Cobertura Nacional
+
+</div>
+
+<div class="card">
+
+Cumplimiento Normativo
+
+</div>
+
+<div class="card">
+
+Innovación
+
+</div>
+
+<div class="card">
+
+Atención Personalizada
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contacto">
+
+<h2>VEXPAR OPERACIONES</h2>
+
+<p>
+
+Ingeniería • Mantenimiento • Servicios Industriales
+
+</p>
+
+<br>
+
+<p>
+
+contacto@vexpar.com
+
+</p>
+
+</footer>
 
 </body>
+
 </html>
