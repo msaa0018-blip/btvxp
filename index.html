@@ -1,696 +1,514 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ficha corporativa oficial de VEXPAR OPERACIONES, S.A. DE C.V. en México. Información pública verificada, contratos y documentos oficiales.">
-  <meta name="keywords" content="VEXPAR OPERACIONES, México, SA de CV, contratos públicos, IMSS, Guanajuato">
-  <meta name="author" content="Ficha Corporativa Pública">
-  <meta property="og:title" content="VEXPAR OPERACIONES, S.A. DE C.V. — Ficha Corporativa">
-  <meta property="og:description" content="Información pública verificada de VEXPAR OPERACIONES en México.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>VEXPAR OPERACIONES, S.A. DE C.V. — Ficha Corporativa México</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏢%3C/text%3E%3C/svg%3E">
-  <style>
-    :root {
-      --bg: #fafafa;
-      --bg-elevated: #ffffff;
-      --bg-muted: #f3f4f6;
-      --text-primary: #111827;
-      --text-secondary: #4b5563;
-      --text-tertiary: #9ca3af;
-      --text-quaternary: #d1d5db;
-      --border: #e5e7eb;
-      --border-strong: #d1d5db;
-      --accent: #1f2937;
-      --accent-hover: #374151;
-      --warning-bg: #fffbeb;
-      --warning-border: #f59e0b;
-      --warning-text: #92400e;
-      --success: #059669;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 14px;
-      --radius-xl: 20px;
-      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -1px rgba(0,0,0,0.03);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
-      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEXPAR - Grupo Industrial Extingue S.A. de C.V.</title>
+    <style>
+        :root {
+            --primary: #121824;
+            --accent: #d32f2f;
+            --accent-dark: #b71c1c;
+            --text-main: #2c3e50;
+            --text-muted: #606f7b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+        }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0a0a0a;
-        --bg-elevated: #141414;
-        --bg-muted: #1a1a1a;
-        --text-primary: #f5f5f5;
-        --text-secondary: #a3a3a3;
-        --text-tertiary: #737373;
-        --text-quaternary: #525252;
-        --border: #262626;
-        --border-strong: #404040;
-        --accent: #e5e5e5;
-        --accent-hover: #ffffff;
-        --warning-bg: #291b00;
-        --warning-border: #b45309;
-        --warning-text: #fbbf24;
-        --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.2);
-        --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3);
-        --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
-      }
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    body {
-      font-family: var(--font-sans);
-      background: var(--bg);
-      color: var(--text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+        .top-bar span {
+            opacity: 0.9;
+        }
 
-    /* ===== NAVIGATION ===== */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(250,250,250,0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    @media (prefers-color-scheme: dark) {
-      .nav { background: rgba(10,10,10,0.85); }
-    }
-    .nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-brand {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--text-primary);
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      transition: var(--transition);
-      position: relative;
-    }
-    .nav-links a:hover { color: var(--text-primary); }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--text-primary);
-      transition: width 0.25s ease;
-    }
-    .nav-links a:hover::after { width: 100%; }
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
 
-    /* ===== HERO ===== */
-    .hero {
-      text-align: center;
-      padding: 80px 24px 60px;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 100px;
-      background: var(--bg-muted);
-      border: 1px solid var(--border);
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      letter-spacing: 0.03em;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-    .hero-subtitle {
-      font-size: 17px;
-      color: var(--text-secondary);
-      font-weight: 400;
-      margin-bottom: 8px;
-    }
-    .hero-meta {
-      font-size: 14px;
-      color: var(--text-tertiary);
-    }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    /* ===== SECTIONS ===== */
-    .section {
-      max-width: 720px;
-      margin: 0 auto 48px;
-      padding: 0 24px;
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .section-header svg {
-      width: 22px; height: 22px;
-      color: var(--text-secondary);
-      flex-shrink: 0;
-    }
-    .section-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    /* ===== CARDS ===== */
-    .card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    .card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-strong);
-    }
+        .logo span {
+            color: var(--accent);
+        }
 
-    /* ===== INFO GRID ===== */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    .info-item {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .info-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .info-value {
-      font-size: 15px;
-      color: var(--text-primary);
-      font-weight: 500;
-      word-break: break-word;
-      line-height: 1.4;
-    }
-    .info-value.muted {
-      color: var(--text-tertiary);
-      font-weight: 400;
-    }
-    .info-value.tag {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-muted);
-      border: 1px solid var(--border);
-      font-size: 13px;
-      font-weight: 500;
-    }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
 
-    /* ===== CONTRACTS TABLE ===== */
-    .contracts-wrap {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-    .contracts-header {
-      display: grid;
-      grid-template-columns: 2.2fr 1fr 0.9fr 0.7fr;
-      gap: 16px;
-      padding: 14px 20px;
-      background: var(--bg-muted);
-      border-bottom: 1px solid var(--border);
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .contract-row {
-      display: grid;
-      grid-template-columns: 2.2fr 1fr 0.9fr 0.7fr;
-      gap: 16px;
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-      transition: var(--transition);
-      align-items: center;
-    }
-    .contract-row:last-child { border-bottom: none; }
-    .contract-row:hover { background: var(--bg-muted); }
-    .contract-row .col-org {
-      color: var(--text-primary);
-      font-weight: 500;
-      line-height: 1.4;
-    }
-    .contract-row .col-amount {
-      color: var(--text-primary);
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
-      font-family: var(--font-mono);
-      font-size: 13px;
-    }
-    .contract-row .col-amount.positive { color: var(--success); }
-    .contract-row .col-date {
-      color: var(--text-tertiary);
-      font-size: 13px;
-    }
-    .contract-row .col-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 3px 8px;
-      border-radius: 100px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    .status-awarded {
-      background: rgba(5, 150, 105, 0.1);
-      color: var(--success);
-    }
-    .status-pending {
-      background: rgba(156, 163, 175, 0.15);
-      color: var(--text-secondary);
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
 
-    /* ===== DOCS LIST ===== */
-    .docs-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .doc-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      color: var(--text-primary);
-      font-size: 14px;
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-    }
-    .doc-item:hover {
-      border-color: var(--border-strong);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-1px);
-    }
-    .doc-item svg {
-      width: 20px; height: 20px;
-      color: var(--text-tertiary);
-      flex-shrink: 0;
-      transition: var(--transition);
-    }
-    .doc-item:hover svg { color: var(--text-secondary); }
-    .doc-content {
-      flex: 1;
-      min-width: 0;
-    }
-    .doc-title {
-      font-weight: 500;
-      margin-bottom: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .doc-source {
-      font-size: 12px;
-      color: var(--text-tertiary);
-    }
-    .doc-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-    .doc-badge {
-      padding: 3px 8px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-muted);
-      border: 1px solid var(--border);
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      font-family: var(--font-mono);
-    }
-    .doc-arrow {
-      color: var(--text-quaternary);
-      transition: var(--transition);
-    }
-    .doc-item:hover .doc-arrow {
-      color: var(--text-secondary);
-      transform: translateX(2px);
-    }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-    /* ===== DISCLAIMER ===== */
-    .disclaimer {
-      display: flex;
-      gap: 16px;
-      padding: 20px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--warning-border);
-      background: var(--warning-bg);
-      margin-top: 48px;
-    }
-    .disclaimer svg {
-      width: 22px; height: 22px;
-      color: var(--warning-border);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .disclaimer p {
-      margin: 0;
-      font-size: 13.5px;
-      color: var(--warning-text);
-      line-height: 1.65;
-    }
-    .disclaimer strong {
-      font-weight: 600;
-      color: var(--warning-text);
-    }
+        .btn-quote {
+            background-color: var(--accent);
+            color: var(--white) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600 !important;
+            transition: background-color 0.2s !important;
+        }
 
-    /* ===== FOOTER ===== */
-    .footer {
-      text-align: center;
-      padding: 48px 24px;
-      border-top: 1px solid var(--border);
-      margin-top: 48px;
-    }
-    .footer p {
-      margin: 0;
-      font-size: 12px;
-      color: var(--text-quaternary);
-      letter-spacing: 0.02em;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 12px;
-    }
-    .footer-links a {
-      font-size: 12px;
-      color: var(--text-tertiary);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-    .footer-links a:hover { color: var(--text-secondary); }
+        .btn-quote:hover {
+            background-color: var(--accent-dark) !important;
+        }
 
-    /* ===== SCROLLBAR ===== */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a233a 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero { padding: 56px 20px 40px; }
-      .info-grid { grid-template-columns: 1fr; gap: 18px; }
-      .contracts-header, .contract-row {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-      .contracts-header { display: none; }
-      .contract-row { padding: 16px; }
-      .contract-row .col-amount::before { content: "Monto: "; color: var(--text-tertiary); font-weight: 400; font-family: var(--font-sans); }
-      .contract-row .col-date::before { content: "Fecha: "; color: var(--text-tertiary); font-weight: 400; }
-      .contract-row .col-status::before { content: "Estatus: "; color: var(--text-tertiary); font-weight: 400; }
-      .doc-item { padding: 12px 14px; }
-      .doc-title { white-space: normal; }
-      .section { padding: 0 16px; margin-bottom: 36px; }
-      .card { padding: 20px; }
-    }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #ff6b6b);
+        }
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-in {
-      animation: fadeInUp 0.6s ease-out forwards;
-      opacity: 0;
-    }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-  </style>
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(211, 47, 47, 0.1);
+            color: var(--accent);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: monospace;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Technical Table Section */
+        .table-section {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+
+        .table-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--bg-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        tr:hover td {
+            background-color: rgba(248, 250, 252, 0.5);
+        }
+
+        /* Capabilities & Software Highlights */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-box {
+            background: var(--white);
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .feature-box h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .code-box {
+            background: var(--primary);
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            border: 1px solid #2d3748;
+        }
+
+        .code-box span {
+            color: #f687b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid #1a233a;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            color: var(--white);
+        }
+
+        .footer-col p, .footer-col li a {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #2d3748;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #718096;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-brand">VEXPAR OPERACIONES</a>
-      <ul class="nav-links">
-        <li><a href="#corporativo">Corporativo</a></li>
-        <li><a href="#contratos">Contratos</a></li>
-        <li><a href="#documentos">Documentos</a></li>
-        <li><a href="#fuentes">Fuentes</a></li>
-      </ul>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>Representación Legal: Ing. Verónica Alejandrina Páramo Frausto</span>
+        <span>Suministros Industriales y Sistemas de Supresión</span>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <header class="hero animate-in">
-    <div class="hero-eyebrow">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-        <polyline points="22 4 12 14.01 9 11.01"/>
-      </svg>
-      Información pública verificada
-    </div>
-    <h1>VEXPAR OPERACIONES</h1>
-    <p class="hero-subtitle">Sociedad Anónima de Capital Variable · México</p>
-    <p class="hero-meta">Ficha generada a partir de fuentes oficiales del IMSS y registros públicos</p>
-  </header>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">VEX<span>PAR</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo Técnico</a></li>
+                <li><a href="#capacidades">Capacidades MRO</a></li>
+                <li><a href="#contacto" class="btn-quote">Cotización Corporativa</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <!-- CORPORATE INFO -->
-  <section class="section animate-in delay-1" id="corporativo">
-    <div class="section-header">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-        <polyline points="9 22 9 12 15 12 15 22"/>
-      </svg>
-      <h2 class="section-title">Información corporativa</h2>
-    </div>
-    <div class="card">
-      <div class="info-grid">
-        <div class="info-item">
-          <span class="info-label">Razón social</span>
-          <span class="info-value">VEXPAR OPERACIONES, S.A. DE C.V.</span>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Ingeniería Avanzada en Protección contra Incendios</h1>
+            <p>Grupo Industrial Extingue S.A. de C.V. — Soluciones integrales, cumplimiento normativo y componentes de alta especificación técnica para la continuidad operativa de su industria.</p>
         </div>
-        <div class="info-item">
-          <span class="info-label">Tipo de sociedad</span>
-          <span class="info-value">Sociedad Anónima de Capital Variable</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">País de constitución</span>
-          <span class="info-value">México</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Giro / Sector</span>
-          <span class="info-value muted">Servicios / Obras públicas (inferido de contratos)</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Sitio web corporativo</span>
-          <span class="info-value muted">vexpar.com.mx — no accesible al momento de la consulta</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">RFC</span>
-          <span class="info-value muted">No disponible en fuentes públicas abiertas</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Registro Público</span>
-          <span class="info-value muted">No localizado en consulta abierta</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Representante legal</span>
-          <span class="info-value muted">No disponible públicamente</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTRACTS -->
-  <section class="section animate-in delay-2" id="contratos">
-    <div class="section-header">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="16" y1="13" x2="8" y2="13"/>
-        <line x1="16" y1="17" x2="8" y2="17"/>
-        <polyline points="10 9 9 9 8 9"/>
-      </svg>
-      <h2 class="section-title">Contratos públicos verificados</h2>
-    </div>
-    <div class="contracts-wrap">
-      <div class="contracts-header">
-        <span>Institución / Proceso</span>
-        <span>Monto</span>
-        <span>Fecha</span>
-        <span>Estatus</span>
-      </div>
-      <div class="contract-row">
-        <span class="col-org">IMSS OOAD Guanajuato — Acta de Fallo N-46</span>
-        <span class="col-amount positive">$137,209.14 MXN</span>
-        <span class="col-date">Marzo 2026</span>
-        <span class="col-status status-awarded">Adjudicado</span>
-      </div>
-      <div class="contract-row">
-        <span class="col-org">IMSS OOAD Guanajuato — Junta de Aclaraciones N-31</span>
-        <span class="col-amount">—</span>
-        <span class="col-date">Enero 2026</span>
-        <span class="col-status status-pending">No adjudicado</span>
-      </div>
-    </div>
-    <p style="margin-top: 12px; font-size: 12px; color: var(--text-tertiary);">
-      Fuente: Repositorio de Contrataciones del IMSS — OOAD Guanajuato, 1er Trimestre 2026.
-    </p>
-  </section>
+    <!-- Main Container -->
+    <div class="container">
 
-  <!-- DOCUMENTS -->
-  <section class="section animate-in delay-3" id="documentos">
-    <div class="section-header">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-      </svg>
-      <h2 class="section-title">Documentos oficiales enlazados</h2>
-    </div>
-    <div class="docs-list">
-      <a class="doc-item" href="https://reposipot.imss.gob.mx/OOAD/GUANAJUATO/1er%20Trimestre%202026/Fallos/ACTA%20FALLO%20N-46%20MARZO.pdf" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-        </svg>
-        <div class="doc-content">
-          <div class="doc-title">Acta de Fallo N-46 — Marzo 2026</div>
-          <div class="doc-source">IMSS OOAD Guanajuato / Repositorio de Fallos</div>
+        <!-- Section: Catálogo / Soluciones -->
+        <div class="section-title" id="catalogo">
+            <h2>Especialidades y Suministros Críticos</h2>
+            <p>Componentes certificados bajo estrictos estándares internacionales de ingeniería</p>
         </div>
-        <div class="doc-meta">
-          <span class="doc-badge">PDF</span>
-          <svg class="doc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </div>
-      </a>
 
-      <a class="doc-item" href="https://reposipot.imss.gob.mx/OOAD/GUANAJUATO/1er%20Trimestre%202026/Junta%20de%20Aclaraciones/JA%20N31%2026.pdf" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-        </svg>
-        <div class="doc-content">
-          <div class="doc-title">Junta de Aclaraciones N-31 — Enero 2026</div>
-          <div class="doc-source">IMSS OOAD Guanajuato / Juntas de Aclaraciones</div>
-        </div>
-        <div class="doc-meta">
-          <span class="doc-badge">PDF</span>
-          <svg class="doc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </div>
-      </a>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon">01</div>
+                <h3>Sistemas de Supresión</h3>
+                <p>Provisión, mantenimiento y componentes críticos para sistemas fijos de supresión de agentes limpios y químicos secos orientados a riesgos mayores.</p>
+                <div class="spec-tag">ANSUL 304700012</div>
+            </div>
 
-      <a class="doc-item" href="https://reposipot.imss.gob.mx/OOAD/GUANAJUATO/1er%20Trimestre%202026/Junta%20de%20Aclaraciones/JA%20N46%2026.pdf" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-        </svg>
-        <div class="doc-content">
-          <div class="doc-title">Junta de Aclaraciones N-46 — Marzo 2026</div>
-          <div class="doc-source">IMSS OOAD Guanajuato / Juntas de Aclaraciones</div>
-        </div>
-        <div class="doc-meta">
-          <span class="doc-badge">PDF</span>
-          <svg class="doc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </div>
-      </a>
-    </div>
-  </section>
+            <div class="card">
+                <div class="card-icon">02</div>
+                <h3>Regulación y Control</h3>
+                <p>Dispositivos de alta precisión para el monitoreo y control de líneas de gas, presión y sistemas contra incendio industriales.</p>
+                <div class="spec-tag">Kidde Fenwal 38-509830-001</div>
+            </div>
 
-  <!-- DISCLAIMER -->
-  <section class="section animate-in delay-4" id="fuentes">
-    <div class="disclaimer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-        <line x1="12" y1="9" x2="12" y2="13"/>
-        <line x1="12" y1="17" x2="12.01" y2="17"/>
-      </svg>
-      <p>
-        <strong>Aviso de transparencia:</strong> La información contenida en esta ficha fue obtenida exclusivamente de fuentes públicas oficiales, específicamente del repositorio de contrataciones del Instituto Mexicano del Seguro Social (IMSS) — OOAD Guanajuato, correspondiente al primer trimestre de 2026. El sitio web corporativo <strong>vexpar.com.mx</strong> no fue accesible durante la elaboración de esta consulta. No se localizaron registros adicionales en plataformas de transparencia gubernamental (Compranet, INFONAVIT, SHCP), registros públicos de comercio ni medios de comunicación. Para obtener información completa sobre domicilio fiscal, objeto social detallado, representantes legales o accionistas, se recomienda consultar directamente el Registro Público de la Propiedad y del Comercio o contactar a la empresa.
-      </p>
-    </div>
-  </section>
+            <div class="card">
+                <div class="card-icon">03</div>
+                <h3>Compliance & MRO</h3>
+                <p>Gestión integral de requerimientos técnicos para concursos públicos y privados, asegurando trazabilidad y cumplimiento legal absoluto.</p>
+                <div class="spec-tag">Normas NFPA / UL / FM</div>
+            </div>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://reposipot.imss.gob.mx/" target="_blank" rel="noopener">Repositorio IMSS</a>
-      <a href="https://www.gob.mx/sfp" target="_blank" rel="noopener">Secretaría de la Función Pública</a>
-      <a href="https://www.sat.gob.mx" target="_blank" rel="noopener">SAT México</a>
+        <!-- Technical Specification Table -->
+        <div class="table-section">
+            <h3>Matriz de Referencia y Componentes Industriales</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría de Suministro</th>
+                        <th>Descripción Técnica y Aplicación</th>
+                        <th>Estándar / Componente OEM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sistemas de Supresión</strong></td>
+                        <td>Contenedor piloto y elementos de disparo para sistemas automáticos de agentes limpios.</td>
+                        <td><code>ANSUL 304700012</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de Presión</strong></td>
+                        <td>Regulidores de presión de alta resistencia para redes de control neumático y contra incendio.</td>
+                        <td><code>Kidde Fenwal 38-509830-001</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adquisiciones MRO</strong></td>
+                        <td>Homologación de partidas y gestión de requerimientos técnicos complejos para licitaciones.</td>
+                        <td>Procesos de Concurso Abierto PMX / Industrial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section: Capacidades / Software -->
+        <div class="section-title" id="capacidades">
+            <h2>Capacidades Operativas y Tecnología</h2>
+            <p>Infraestructura interna orientada a la eficiencia y el control riguroso de proyectos</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>Cumplimiento Normativo y Licitaciones</h4>
+                <p>Experiencia contrastada en la gestión de documentación legal, técnica y administrativa para concursos complejos de gran escala en el sector industrial.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Gestión ERP Propietaria (ALLIN)</h4>
+                <p>Arquitectura de software interna optimizada para el control de órdenes de compra, flujos de autorización y trazabilidad de componentes críticos.</p>
+                <div class="code-box">
+                    <span>// Módulo ERP ALLIN</span><br>
+                    Status: Active | Traceability: 100% | Auth_Level: Authorized
+                </div>
+            </div>
+        </div>
+
     </div>
-    <p>Última actualización: agosto 2026 · Datos verificados de fuentes oficiales · México</p>
-  </footer>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Grupo Industrial Extingue S.A. de C.V.</h4>
+                <p>VEXPAR ofrece soluciones de ingeniería especializadas, garantizando la seguridad industrial y la continuidad operativa corporativa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Representación Legal</h4>
+                <p><strong>Ing. Verónica Alejandrina Páramo Frausto</strong><br>Representante Legal y Dirección General</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo Técnico</a></li>
+                    <li><a href="#capacidades">Capacidades MRO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Grupo Industrial Extingue S.A. de C.V. (VEXPAR). Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
