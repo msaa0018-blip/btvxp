@@ -1,591 +1,651 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VEXPAR OPERACIONES</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:white;
-color:#111;
-overflow-x:hidden;
-
-}
-
-header{
-
-position:fixed;
-width:100%;
-top:0;
-left:0;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:25px 8%;
-
-background:rgba(255,255,255,.85);
-
-backdrop-filter:blur(20px);
-
-z-index:999;
-
-}
-
-header img{
-
-height:45px;
-
-}
-
-nav a{
-
-text-decoration:none;
-color:#111;
-margin-left:35px;
-font-weight:500;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-opacity:.55;
-
-}
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-background:
-
-linear-gradient(rgba(255,255,255,.78),
-rgba(255,255,255,.78)),
-
-url("https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=80");
-
-background-size:cover;
-
-background-position:center;
-
-padding:40px;
-
-}
-
-.hero h1{
-
-font-size:72px;
-
-font-weight:800;
-
-letter-spacing:-3px;
-
-margin-bottom:20px;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-max-width:900px;
-
-margin:auto;
-
-color:#555;
-
-line-height:1.7;
-
-}
-
-.btn{
-
-display:inline-block;
-
-margin-top:45px;
-
-padding:18px 42px;
-
-border-radius:50px;
-
-background:#111;
-
-color:white;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-3px);
-
-}
-
-section{
-
-padding:120px 10%;
-
-}
-
-h2{
-
-font-size:48px;
-
-margin-bottom:25px;
-
-}
-
-.subtitle{
-
-color:#777;
-
-font-size:20px;
-
-max-width:850px;
-
-line-height:1.8;
-
-margin-bottom:70px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-.card{
-
-padding:45px;
-
-border-radius:20px;
-
-background:#fafafa;
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 30px 60px rgba(0,0,0,.08);
-
-}
-
-.card h3{
-
-margin-bottom:18px;
-
-}
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:30px;
-
-text-align:center;
-
-}
-
-.number{
-
-font-size:58px;
-
-font-weight:800;
-
-}
-
-.gray{
-
-background:#f6f6f6;
-
-}
-
-.clients{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:25px;
-
-}
-
-.client{
-
-padding:18px 30px;
-
-border-radius:40px;
-
-background:white;
-
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-
-font-weight:600;
-
-}
-
-footer{
-
-padding:80px;
-
-background:#111;
-
-color:white;
-
-text-align:center;
-
-}
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:48px;
-
-}
-
-.stats{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-nav{
-
-display:none;
-
-}
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>VEXPAR OPERACIONES · Supply</title>
+  <!-- Google Fonts · Inter & Playfair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratis) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #f7f5f0;
+      --bg-secondary: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #3a3a3a;
+      --accent-gold: #b99a6b;
+      --accent-dark: #0b0a09;
+      --border-light: rgba(0,0,0,0.06);
+      --shadow-card: 0 20px 40px -12px rgba(0,0,0,0.08);
+      --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #11100e;
+      --bg-secondary: #1c1b18;
+      --text-primary: #ece9e0;
+      --text-secondary: #cbc6b9;
+      --border-light: rgba(255,255,255,0.06);
+      --shadow-card: 0 20px 40px -12px rgba(0,0,0,0.7);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* ----- scrollbar premium ----- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 6px; }
+
+    /* ----- Lenis smooth (se activa con JS) ----- */
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+
+    /* ----- HERO fullscreen con video 4K ----- */
+    .hero-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.6) saturate(1.1);
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(2px);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+      transition: transform 0.6s ease;
+    }
+    .hero-logo:hover { transform: scale(1.02); }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2.8rem, 10vw, 5.6rem);
+      color: white;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      color: rgba(255,255,255,0.85);
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--accent-gold);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #0b0a09;
+      padding: 0.9rem 2.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border: none;
+      transition: var(--transition-smooth);
+      box-shadow: 0 10px 30px -8px rgba(185, 154, 107, 0.3);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .btn-primary:hover {
+      background: #d4b483;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -8px rgba(185, 154, 107, 0.5);
+      color: #000;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      color: white;
+      padding: 0.9rem 2.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      font-size: 1rem;
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: white;
+      transform: translateY(-4px);
+    }
+
+    /* ----- contenedor general (storytelling) ----- */
+    .container {
+      position: relative;
+      z-index: 5;
+      background: var(--bg-primary);
+      margin-top: 100vh; /* empuja debajo del hero fijo */
+      padding: 4rem 2rem 6rem;
+      transition: background 0.3s;
+    }
+
+    /* secciones */
+    .section {
+      max-width: 1280px;
+      margin: 0 auto 8rem;
+      padding: 0 1.5rem;
+    }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.8rem;
+      color: var(--text-primary);
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+
+    /* grid de servicios / tarjetas */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card-premium {
+      background: var(--bg-secondary);
+      padding: 2.2rem 1.8rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-light);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+    .card-premium:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 30px 50px -18px rgba(0,0,0,0.15);
+      border-color: var(--accent-gold);
+    }
+    .card-premium .icon {
+      font-size: 2.6rem;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+      display: inline-block;
+    }
+    .card-premium h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.01em;
+    }
+    .card-premium p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    /* contadores animados (GSAP) */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0 2rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3.4rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-secondary);
+      margin-top: 0.4rem;
+    }
+
+    /* galería con parallax (efecto sutil) */
+    .gallery-parallax {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 280px;
+      background: var(--bg-secondary);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.4s ease;
+      will-change: transform;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      color: white;
+      font-weight: 500;
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+
+    /* toggle modo oscuro (automático + manual) */
+    .theme-toggle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: 60px;
+      padding: 0.8rem 1.2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+    .theme-toggle i { font-size: 1.2rem; }
+    .theme-toggle:hover { transform: scale(1.04); }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.8rem; }
+      .container { padding: 2rem 1rem 4rem; }
+      .section { margin-bottom: 4rem; }
+      .grid-3 { gap: 1.5rem; }
+      .stats-grid { gap: 1rem; }
+    }
+
+    /* placeholder para imágenes (simulación) */
+    .img-placeholder {
+      background: linear-gradient(145deg, #d4c9b6, #b9aa92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    /* microinteracciones en tarjetas (CSS) */
+    .card-premium .icon { transition: transform 0.3s; }
+    .card-premium:hover .icon { transform: scale(1.1) rotate(-2deg); }
+
+    /* footer */
+    .footer-premium {
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-premium span i { color: var(--accent-gold); margin: 0 4px; }
+  </style>
 </head>
-
 <body>
-
-<header>
-
-<img src="https://raw.githubusercontent.com/msaa0018-blip/vexpar/main/LOGO%20VEXPAR.jpg">
-
-<nav>
-
-<a href="#empresa">Empresa</a>
-
-<a href="#servicios">Servicios</a>
-
-<a href="#clientes">Clientes</a>
-
-<a href="#contacto">Contacto</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div>
-
-<h1>VEXPAR OPERACIONES</h1>
-
-<p>
-
-Ingeniería, mantenimiento y soluciones industriales para la infraestructura energética de México.
-
-</p>
-
-<a class="btn" href="#empresa">
-
-Conocer más
-
-</a>
-
-</div>
-
-</section>
-
-<section id="empresa">
-
-<h2>Experiencia</h2>
-
-<p class="subtitle">
-
-Somos una empresa enfocada en desarrollar soluciones de ingeniería,
-mantenimiento y servicios especializados para proyectos industriales
-de alta exigencia.
-
-Nuestro compromiso es ofrecer seguridad,
-calidad y cumplimiento en cada proyecto.
-
-</p>
-
-<div class="stats">
-
-<div>
-
-<div class="number">15+</div>
-
-Años de experiencia
-
-</div>
-
-<div>
-
-<div class="number">300+</div>
-
-Proyectos
-
-</div>
-
-<div>
-
-<div class="number">120+</div>
-
-Clientes
-
-</div>
-
-<div>
-
-<div class="number">24/7</div>
-
-Atención
-
-</div>
-
-</div>
-
-</section>
-
-<section class="gray">
-
-<h2>Misión</h2>
-
-<p class="subtitle">
-
-Proporcionar soluciones industriales de alto valor mediante ingeniería,
-tecnología e innovación, garantizando seguridad,
-calidad y eficiencia en cada proyecto.
-
-</p>
-
-<h2>Visión</h2>
-
-<p class="subtitle">
-
-Ser una empresa líder en servicios industriales para el sector energético,
-reconocida por su excelencia técnica,
-innovación y compromiso con nuestros clientes.
-
-</p>
-
-</section>
-
-<section id="servicios">
-
-<h2>Servicios</h2>
-
-<p class="subtitle">
-
-Capacidad técnica para atender proyectos industriales de cualquier escala.
-
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Ingeniería Industrial</h3>
-
-Diseño, integración, supervisión y desarrollo de proyectos.
-
-</div>
-
-<div class="card">
-
-<h3>Mantenimiento</h3>
-
-Preventivo, correctivo y predictivo.
-
-</div>
-
-<div class="card">
-
-<h3>Automatización</h3>
-
-PLC, SCADA e instrumentación industrial.
-
-</div>
-
-<div class="card">
-
-<h3>Obra Electromecánica</h3>
-
-Instalaciones industriales de alta calidad.
-
-</div>
-
-<div class="card">
-
-<h3>Servicios Especializados</h3>
-
-Personal altamente capacitado para proyectos críticos.
-
-</div>
-
-<div class="card">
-
-<h3>Gestión de Proyectos</h3>
-
-Planeación, ejecución y seguimiento integral.
-
-</div>
-
-</div>
-
-</section>
-
-<section id="clientes" class="gray">
-
-<h2>Clientes</h2>
-
-<p class="subtitle">
-
-Empresas e instituciones que han confiado en nuestros servicios.
-
-</p>
-
-<div class="clients">
-
-<div class="client">PEMEX</div>
-
-<div class="client">IBERDROLA</div>
-
-<div class="client">ICA FLOUR</div>
-
-<div class="client">CENAGAS</div>
-
-<div class="client">CENAM</div>
-
-<div class="client">JUDEL</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>¿Por qué elegir VEXPAR?</h2>
-
-<div class="grid">
-
-<div class="card">
-
-Seguridad Operacional
-
-</div>
-
-<div class="card">
-
-Ingeniería Especializada
-
-</div>
-
-<div class="card">
-
-Cobertura Nacional
-
-</div>
-
-<div class="card">
-
-Cumplimiento Normativo
-
-</div>
-
-<div class="card">
-
-Innovación
-
-</div>
-
-<div class="card">
-
-Atención Personalizada
-
-</div>
-
-</div>
-
-</section>
-
-<footer id="contacto">
-
-<h2>VEXPAR OPERACIONES</h2>
-
-<p>
-
-Ingeniería • Mantenimiento • Servicios Industriales
-
-</p>
-
-<br>
-
-<p>
-
-contacto@vexpar.com
-
-</p>
-
-</footer>
-
+  <!-- HERO VIDEO 4K (reemplazar con archivo real) -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-warehouse-1206-large.mp4" type="video/mp4">
+    <!-- fallback -->
+  </video>
+
+  <!-- HERO OVERLAY -->
+  <section class="hero-overlay" id="hero">
+    <div class="hero-content">
+      <!-- LOGO VEXPAR desde github (se intenta mostrar) -->
+      <img class="hero-logo" src="https://raw.githubusercontent.com/msaa0018-blip/vexpar/main/LOGO%20VEXPAR.jpg" alt="VEXPAR OPERACIONES" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%2280%22%3E%3Crect width=%22200%22 height=%2280%22 fill=%22%23b99a6b%22/%3E%3Ctext x=%2220%22 y=%2250%22 font-family=%22Inter%22 font-size=%2230%22 fill=%22%23000%22%3EVEXPAR%3C/text%3E%3C/svg%3E';">
+      <h1 class="hero-title">Suministro industrial<br>con excelencia</h1>
+      <div class="hero-sub">VEXPAR OPERACIONES · Supply Chain</div>
+      <div class="hero-cta">
+        <a href="#soluciones" class="btn-primary">Explorar soluciones <i class="fas fa-arrow-right" style="margin-left:10px;"></i></a>
+        <a href="#proyectos" class="btn-outline">Ver proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL (storytelling) -->
+  <main class="container" id="main-content">
+    <!-- SECCIÓN 1 · QUIENES SOMOS -->
+    <section class="section" id="soluciones">
+      <div class="section-label"><i class="fas fa-cube"></i> VEXPAR operaciones</div>
+      <h2 class="section-title">Ingeniería de suministros<br>para la industria moderna</h2>
+      <p class="section-desc">Integramos logística, aprovisionamiento y distribución de componentes críticos. Más de 15 años garantizando la continuidad operativa de plantas y proyectos en Latinoamérica.</p>
+      
+      <div class="grid-3">
+        <div class="card-premium">
+          <div class="icon"><i class="fas fa-oil-can"></i></div>
+          <h3>Lubricantes & Fluidos</h3>
+          <p>Gamas industriales, aceites hidráulicos, grasas de alta performance y aditivos especializados.</p>
+        </div>
+        <div class="card-premium">
+          <div class="icon"><i class="fas fa-tools"></i></div>
+          <h3>Herramientas & Equipos</h3>
+          <p>Torquímetros, hidráulica, neumática, y equipos de medición de precisión para taller y campo.</p>
+        </div>
+        <div class="card-premium">
+          <div class="icon"><i class="fas fa-industry"></i></div>
+          <h3>Repuestos & Componentes</h3>
+          <p>Filtros, correas, rodamientos, sensores y partes de reemplazo para maquinaria pesada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2 · CONTADORES ANIMADOS (GSAP) -->
+    <section class="section" id="estadisticas">
+      <div class="section-label"><i class="fas fa-chart-simple"></i> impacto</div>
+      <h2 class="section-title">Cifras que respaldan<br>nuestra operación</h2>
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-number" data-count="380">0</div><div class="stat-label">Clientes activos</div></div>
+        <div class="stat-item"><div class="stat-number" data-count="1250">0</div><div class="stat-label">Proyectos suministrados</div></div>
+        <div class="stat-item"><div class="stat-number" data-count="97">0</div><div class="stat-label">% de disponibilidad</div></div>
+        <div class="stat-item"><div class="stat-number" data-count="14">0</div><div class="stat-label">Años de trayectoria</div></div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3 · GALERÍA PARALLAX -->
+    <section class="section" id="proyectos">
+      <div class="section-label"><i class="fas fa-images"></i> portafolio</div>
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="section-desc">Suministros para minería, energía y construcción. Entregas justo a tiempo con trazabilidad total.</p>
+      <div class="gallery-parallax">
+        <div class="gallery-item img-placeholder" data-speed="0.03"> 
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop&crop=center" alt="minería">
+          <div class="overlay">Minería · Chile</div>
+        </div>
+        <div class="gallery-item img-placeholder" data-speed="0.06">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop&crop=center" alt="energía">
+          <div class="overlay">Energía · Colombia</div>
+        </div>
+        <div class="gallery-item img-placeholder" data-speed="0.09">
+          <img src="https://images.unsplash.com/photo-1581092335873-44b0b8927e69?w=400&h=300&fit=crop&crop=center" alt="construcción">
+          <div class="overlay">Construcción · Perú</div>
+        </div>
+        <div class="gallery-item img-placeholder" data-speed="0.02">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop&crop=center" alt="logística">
+          <div class="overlay">Logística · Panamá</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-premium">
+      <span>© 2026 VEXPAR OPERACIONES · <i class="fas fa-bolt"></i> suministro industrial</span>
+      <span><i class="fas fa-envelope"></i> supply@vexpar.com · <i class="fas fa-phone"></i> +56 2 2750 1800</span>
+    </footer>
+  </main>
+
+  <!-- BOTÓN THEME (oscuro/claro automático + manual) -->
+  <div class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+    <i class="fas fa-moon" id="themeIcon"></i>
+    <span id="themeLabel">Automático</span>
+  </div>
+
+  <!-- LIBRERÍAS: LENIS + GSAP (CDN) -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <script>
+    (function() {
+      // ----- LENIS SMOOTH SCROLL -----
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        smoothWheel: true,
+      });
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+
+      // ----- GSAP + SCROLLTRIGGER -----
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Contadores animados
+      function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-count'), 10);
+          if (!target) return;
+          // resetear a 0 cada vez que se activa (para que funcione en scroll)
+          counter.innerText = '0';
+          gsap.to(counter, {
+            innerText: target,
+            duration: 2.2,
+            ease: "power2.out",
+            snap: { innerText: 1 },
+            scrollTrigger: {
+              trigger: counter,
+              start: 'top 85%',
+              toggleActions: 'play none none reset',
+            },
+            onUpdate: function() {
+              // formateo sencillo
+              let val = Math.floor(parseFloat(counter.innerText));
+              if (counter.getAttribute('data-count') === '97') {
+                counter.innerText = val + '%';
+              } else {
+                counter.innerText = val;
+              }
+            },
+            onComplete: function() {
+              if (counter.getAttribute('data-count') === '97') {
+                counter.innerText = '97%';
+              } else {
+                counter.innerText = target;
+              }
+            }
+          });
+        });
+      }
+
+      // Galería parallax sutil con GSAP (movimiento en scroll)
+      function initGalleryParallax() {
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach((item, i) => {
+          const speed = parseFloat(item.dataset.speed) || 0.04;
+          gsap.to(item, {
+            y: () => - (window.innerHeight * speed * 0.3),
+            ease: "none",
+            scrollTrigger: {
+              trigger: item,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1.2,
+              invalidateOnRefresh: true,
+            }
+          });
+        });
+      }
+
+      // Animaciones de entrada para tarjetas (storytelling)
+      function initCards() {
+        gsap.utils.toArray('.card-premium').forEach((card, i) => {
+          gsap.from(card, {
+            opacity: 0,
+            y: 60,
+            duration: 0.9,
+            delay: i * 0.12,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 88%',
+              toggleActions: 'play none none reset',
+            }
+          });
+        });
+        // títulos
+        gsap.utils.toArray('.section-title').forEach(title => {
+          gsap.from(title, {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: title,
+              start: 'top 90%',
+              toggleActions: 'play none none reset',
+            }
+          });
+        });
+      }
+
+      // Inicializar todo al cargar
+      window.addEventListener('load', () => {
+        animateCounters();
+        initGalleryParallax();
+        initCards();
+        // Forzar actualización de ScrollTrigger
+        ScrollTrigger.refresh();
+      });
+
+      // ----- THEME (modo oscuro/claro automático) -----
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const themeLabel = document.getElementById('themeLabel');
+      
+      // Detectar preferencia del sistema
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      let currentTheme = localStorage.getItem('vexpar-theme') || 'auto';
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark' || (theme === 'auto' && prefersDark.matches);
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        themeLabel.innerText = theme === 'auto' ? 'Automático' : (isDark ? 'Oscuro' : 'Claro');
+        localStorage.setItem('vexpar-theme', theme);
+        currentTheme = theme;
+      }
+
+      function toggleTheme() {
+        if (currentTheme === 'auto') {
+          applyTheme('light');
+        } else if (currentTheme === 'light') {
+          applyTheme('dark');
+        } else {
+          applyTheme('auto');
+        }
+        // refrescar ScrollTrigger para evitar saltos
+        setTimeout(() => ScrollTrigger.refresh(), 100);
+      }
+
+      themeToggle.addEventListener('click', toggleTheme);
+
+      // Escuchar cambios en preferencia del sistema (si está en auto)
+      prefersDark.addEventListener('change', () => {
+        if (currentTheme === 'auto') applyTheme('auto');
+      });
+
+      // aplicar tema inicial
+      applyTheme(currentTheme);
+
+      // ----- MICROINTERACCIÓN extra: parallax en hero (no necesario pero elegante) -----
+      window.addEventListener('mousemove', (e) => {
+        const hero = document.querySelector('.hero-overlay');
+        const x = (e.clientX / window.innerWidth - 0.5) * 6;
+        const y = (e.clientY / window.innerHeight - 0.5) * 6;
+        hero.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+    })();
+  </script>
 </body>
-
 </html>
