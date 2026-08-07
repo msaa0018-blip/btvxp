@@ -162,12 +162,11 @@
     .logo-wrapper::before {
       content: '';
       position: absolute;
-      inset: -15px;
-      background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
-      border-radius: 50%;
-      filter: blur(20px);
+      inset: -22px -30px;
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,0) 75%);
+      filter: blur(18px);
       z-index: -1;
-      opacity: 0.8;
+      opacity: 0.9;
       transition: opacity 0.4s ease;
     }
     .logo-wrapper:hover::before {
@@ -177,13 +176,13 @@
       height: 38px; 
       width: auto; 
       transition: height .4s var(--ease);
-      filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 16px rgba(255,255,255,0.5));
     }
     header.scrolled .logo-mark img { height: 30px; }
     header.scrolled .logo-wrapper::before {
-      inset: -10px;
-      filter: blur(15px);
-      opacity: 0.5;
+      inset: -16px -22px;
+      filter: blur(14px);
+      opacity: 0.7;
     }
 
     /* Logo en footer */
@@ -194,17 +193,16 @@
     .footer-logo-wrapper::before {
       content: '';
       position: absolute;
-      inset: -12px;
-      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-      border-radius: 50%;
-      filter: blur(15px);
+      inset: -16px -22px;
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0) 75%);
+      filter: blur(14px);
       z-index: -1;
-      opacity: 0.6;
+      opacity: 0.75;
     }
     .footer-logo-wrapper img {
       height: 30px;
       width: auto;
-      filter: brightness(1.1);
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.8)) drop-shadow(0 0 12px rgba(255,255,255,0.4));
     }
 
     nav.primary-nav {
@@ -911,7 +909,7 @@
   <div class="wrap">
     <a href="#top" class="logo-mark">
       <div class="logo-wrapper">
-        <img src="LOGO%20VEXPAR.jpg" alt="VEXPAR OPERACIONES" onerror="this.style.display='none'">
+        <img src="LOGO-VEXPAR.png" alt="VEXPAR OPERACIONES" onerror="this.style.display='none'">
       </div>
     </a>
     <nav class="primary-nav">
@@ -1314,7 +1312,7 @@
     <div class="footer-top">
       <div>
         <div class="footer-logo-wrapper">
-          <img src="LOGO%20VEXPAR.jpg" alt="VEXPAR OPERACIONES" onerror="this.style.display='none'">
+          <img src="LOGO-VEXPAR.png" alt="VEXPAR OPERACIONES" onerror="this.style.display='none'">
         </div>
         <p>Venta de suministros industriales especializados para los sectores petrolero y energético.</p>
       </div>
