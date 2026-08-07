@@ -277,19 +277,31 @@
       width: 100%;
     }
     .hero-copy .eyebrow { margin-bottom: 26px; }
+    .hero-copy-highlight {
+      position: relative;
+      background: #fff;
+      padding: 28px 32px;
+      box-shadow: -2000px 0 0 #fff, 2000px 0 0 #fff;
+      box-sizing: border-box;
+    }
     .hero h1 {
       font-size: clamp(38px, 4.6vw, 64px);
       color: #fff;
+      -webkit-text-stroke: 1.5px #0A0B2E;
+      text-stroke: 1.5px #0A0B2E;
+      paint-order: stroke fill;
       max-width: 16ch;
     }
     .hero h1 em {
       font-style: normal;
       color: var(--red-500);
+      -webkit-text-stroke: 0;
+      text-stroke: 0;
     }
     .hero-copy p.lead {
       margin-top: 26px;
       font-size: 18px;
-      color: rgba(247,245,240,0.68);
+      color: var(--navy-900);
       max-width: 46ch;
       line-height: 1.7;
     }
@@ -967,9 +979,11 @@
     <div class="blueprint-grid"></div>
     <div class="wrap">
       <div class="hero-copy">
-        <div class="eyebrow on-dark" style="justify-content:flex-end;">COMERCIALIZADORA · SERVICIOS · SOLUCIONES INTEGRALES</div>
-        <h1>Suministro industrial para procesos que <em>no pueden detenerse</em>.</h1>
-        <p class="lead">VEXPAR OPERACIONES se dedica a la venta de suministros industriales especializados para garantizar el correcto funcionamiento de los procesos industriales de sus clientes, con una amplia variedad de marcas, modelos y soluciones para los sectores petrolero y energético.</p>
+        <div class="hero-copy-highlight">
+          <div class="eyebrow on-dark" style="justify-content:flex-end;">COMERCIALIZADORA · SERVICIOS · SOLUCIONES INTEGRALES</div>
+          <h1>Suministro industrial para procesos que <em>no pueden detenerse</em>.</h1>
+          <p class="lead">VEXPAR OPERACIONES se dedica a la venta de suministros industriales especializados para garantizar el correcto funcionamiento de los procesos industriales de sus clientes, con una amplia variedad de marcas, modelos y soluciones para los sectores petrolero y energético.</p>
+        </div>
         <div class="hero-actions">
           <a href="#contacto" class="btn btn-primary">Solicitar cotización
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
