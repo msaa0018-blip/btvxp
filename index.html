@@ -158,6 +158,7 @@
     .logo-wrapper {
       position: relative;
       display: inline-block;
+      isolation: isolate;
     }
     .logo-wrapper::before {
       content: '';
@@ -165,7 +166,7 @@
       inset: -22px -30px;
       background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,0) 75%);
       filter: blur(18px);
-      z-index: -1;
+      z-index: 0;
       opacity: 0.9;
       transition: opacity 0.4s ease;
     }
@@ -173,6 +174,8 @@
       opacity: 1;
     }
     .logo-mark img { 
+      position: relative;
+      z-index: 1;
       height: 38px; 
       width: auto; 
       transition: height .4s var(--ease);
@@ -189,17 +192,20 @@
     .footer-logo-wrapper {
       position: relative;
       display: inline-block;
+      isolation: isolate;
     }
     .footer-logo-wrapper::before {
       content: '';
       position: absolute;
-      inset: -16px -22px;
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0) 75%);
-      filter: blur(14px);
-      z-index: -1;
-      opacity: 0.75;
+      inset: -18px -24px;
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,0) 75%);
+      filter: blur(16px);
+      z-index: 0;
+      opacity: 0.85;
     }
     .footer-logo-wrapper img {
+      position: relative;
+      z-index: 1;
       height: 30px;
       width: auto;
       filter: drop-shadow(0 0 5px rgba(255,255,255,0.8)) drop-shadow(0 0 12px rgba(255,255,255,0.4));
