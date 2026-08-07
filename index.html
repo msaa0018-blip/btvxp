@@ -389,6 +389,121 @@
     }
     .alt-bg { background: var(--paper-alt); }
 
+    /* ===== MISIÓN, VISIÓN Y VALORES (NUEVO) ===== */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .mv-card {
+      background: var(--paper-card);
+      padding: 40px 32px 38px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      transition: all .4s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px -20px rgba(20,22,79,0.2);
+      border-color: var(--red-600);
+    }
+    .mv-card .mv-icon {
+      font-size: 28px;
+      color: var(--red-600);
+      margin-bottom: 18px;
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+    }
+    .mv-card h3 {
+      font-size: 20px;
+      color: var(--navy-900);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .mv-card p {
+      color: var(--steel);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .mv-card .mv-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red-600);
+      padding: 6px 14px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+    }
+
+    /* Valores en grid 5 columnas */
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .valor-item {
+      background: var(--paper-card);
+      padding: 24px 16px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      transition: all .3s var(--ease);
+    }
+    .valor-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--red-600);
+      box-shadow: 0 12px 28px -16px rgba(20,22,79,0.15);
+    }
+    .valor-item .valor-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--red-600);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .valor-item .valor-nombre {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy-900);
+    }
+
+    /* Tagline comercial */
+    .comercial-tagline {
+      text-align: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--steel-light);
+      padding: 20px 0 10px;
+      border-top: 1px solid var(--line);
+      margin-top: 40px;
+    }
+    .comercial-tagline span {
+      color: var(--red-600);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1080px) {
+      .mv-grid { grid-template-columns: repeat(2, 1fr); }
+      .valores-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .mv-grid { grid-template-columns: 1fr; }
+      .valores-grid { grid-template-columns: repeat(2, 1fr); }
+      .comercial-tagline { font-size: 11px; letter-spacing: 0.1em; }
+    }
+
     /* ===== SERVICIOS ===== */
     .services-grid {
       display: grid;
@@ -749,7 +864,7 @@
       <img src="LOGO%20VEXPAR.jpg" alt="VEXPAR OPERACIONES" onerror="this.style.display='none'">
     </a>
     <nav class="primary-nav">
-      <a href="#lineas">Qué hacemos</a>
+      <a href="#quienes-somos">Quiénes somos</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#proceso">Proceso</a>
       <a href="#sectores">Sectores</a>
@@ -770,7 +885,7 @@
     <div class="blueprint-grid"></div>
     <div class="wrap">
       <div class="hero-copy">
-        <div class="eyebrow on-dark">Suministros industriales especializados</div>
+        <div class="eyebrow on-dark">COMERCIALIZADORA · SERVICIOS · SOLUCIONES INTEGRALES</div>
         <h1>Suministro industrial para procesos que <em>no pueden detenerse</em>.</h1>
         <p class="lead">VEXPAR OPERACIONES se dedica a la venta de suministros industriales especializados para garantizar el correcto funcionamiento de los procesos industriales de sus clientes, con una amplia variedad de marcas, modelos y soluciones para los sectores petrolero y energético.</p>
         <div class="hero-actions">
@@ -823,8 +938,74 @@
     </div>
   </section>
 
+  <!-- ===== QUIÉNES SOMOS (MISIÓN, VISIÓN, VALORES) ===== -->
+  <section id="quienes-somos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Quiénes somos</div>
+          <h2>Misión, Visión y Valores que nos guían.</h2>
+        </div>
+        <p class="desc">En VEXPAR OPERACIONES tenemos claro nuestro propósito: ofrecer soluciones integrales a la industria con equipos de alta calidad para la protección industrial y la seguridad del personal e infraestructura.</p>
+      </div>
+
+      <!-- Tagline comercial -->
+      <div class="comercial-tagline reveal">
+        <span>COMERCIALIZADORA</span> · <span>SERVICIOS</span> · <span>SOLUCIONES INTEGRALES</span>
+      </div>
+
+      <!-- Misión, Visión, Valores -->
+      <div class="mv-grid reveal">
+        <!-- Misión -->
+        <div class="mv-card">
+          <div class="mv-icon">✦</div>
+          <h3>Misión</h3>
+          <p>Ofrecer soluciones integrales a las Industrias mediante el suministro de equipos de alta calidad para la protección industrial y seguridad del personal y su infraestructura.</p>
+          <span class="mv-tag">Compromiso con la industria</span>
+        </div>
+
+        <!-- Visión -->
+        <div class="mv-card">
+          <div class="mv-icon">◈</div>
+          <h3>Visión</h3>
+          <p>En 2035 ser una empresa reconocida a nivel nacional como proveedor clave en la Protección Industrial.</p>
+          <span class="mv-tag">Meta 2035</span>
+        </div>
+
+        <!-- Valores (resumen con grid) -->
+        <div class="mv-card" style="grid-column: span 1;">
+          <div class="mv-icon">◆</div>
+          <h3>Valores</h3>
+          <p>Los principios que rigen cada una de nuestras operaciones y relaciones comerciales.</p>
+          <div class="valores-grid" style="margin-top:16px;">
+            <div class="valor-item">
+              <span class="valor-num">01</span>
+              <span class="valor-nombre">Compromiso</span>
+            </div>
+            <div class="valor-item">
+              <span class="valor-num">02</span>
+              <span class="valor-nombre">Honestidad</span>
+            </div>
+            <div class="valor-item">
+              <span class="valor-num">03</span>
+              <span class="valor-nombre">Diligencia</span>
+            </div>
+            <div class="valor-item">
+              <span class="valor-num">04</span>
+              <span class="valor-nombre">Equidad</span>
+            </div>
+            <div class="valor-item">
+              <span class="valor-num">05</span>
+              <span class="valor-nombre">Adaptabilidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== QUÉ HACEMOS ===== -->
-  <section id="lineas">
+  <section id="lineas" class="alt-bg">
     <div class="wrap">
       <div class="section-head reveal">
         <div>
@@ -868,7 +1049,7 @@
   </section>
 
   <!-- ===== CATÁLOGO ===== -->
-  <section id="catalogo" class="alt-bg">
+  <section id="catalogo">
     <div class="wrap">
       <div class="section-head reveal">
         <div>
@@ -1086,7 +1267,7 @@
       </div>
       <div class="footer-col">
         <h5>Negocio</h5>
-        <a href="#lineas">Qué hacemos</a>
+        <a href="#quienes-somos">Quiénes somos</a>
         <a href="#catalogo">Catálogo</a>
         <a href="#proceso">Proceso</a>
       </div>
