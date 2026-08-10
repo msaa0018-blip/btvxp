@@ -107,7 +107,7 @@ body.menu-open .mobile-menu a.m-link:nth-child(6){transition-delay:.38s}
 .hero-visual{position:relative}
 .hero-frame{position:relative}
 .hero-frame::before{content:'';position:absolute;inset:0;transform:translate(16px,16px);border:1px solid rgba(255,71,71,.45);z-index:0}
-.hero-frame img{position:relative;z-index:1;width:100%;aspect-ratio:1/1.02;object-fit:cover;border:1px solid var(--line-dark)}
+.hero-frame img{position:relative;z-index:1;width:100%;aspect-ratio:1/1.02;object-fit:contain;background:var(--navy-950);border:1px solid var(--line-dark)}
 .hero-badge{position:absolute;z-index:2;left:-30px;bottom:36px;background:var(--navy-950);border:1px solid var(--line-dark);padding:16px 20px;animation:floaty 5s ease-in-out infinite}
 .hero-badge img{height:44px;width:auto}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
@@ -172,12 +172,6 @@ section{padding:130px 0}
 .diff-item h3{font-size:20px;margin-bottom:10px}
 .diff-item p{color:var(--steel);font-size:14.5px;line-height:1.7;max-width:44ch}
 /* ============ ESQUEMA ============ */
-.schema-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.schema-copy h2{font-size:clamp(28px,3vw,40px);margin:20px 0 22px}
-.schema-copy p{color:var(--steel);line-height:1.75;max-width:46ch}
-.schema-list{margin-top:30px;display:grid;gap:12px}
-.schema-list li{list-style:none;display:flex;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-900)}
-.schema-list li::before{content:'';width:8px;height:8px;background:var(--red-600);flex-shrink:0}
 .standalone-diagram{width:100%;max-width:520px;margin:0 auto}
 .standalone-diagram svg{width:100%;height:auto}
 .schema-line{fill:none;stroke:rgba(20,22,79,.35);stroke-width:1.2;stroke-linecap:round;stroke-dasharray:2200;stroke-dashoffset:2200}
@@ -191,6 +185,12 @@ section{padding:130px 0}
 .play .schema-label{animation:fadein .6s ease forwards;animation-delay:2.5s}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fadein{to{opacity:1}}
+.schema-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.schema-copy h2{font-size:clamp(28px,3vw,40px);margin:20px 0 22px}
+.schema-copy p{color:var(--steel);line-height:1.75;max-width:46ch}
+.schema-list{margin-top:30px;display:grid;gap:12px}
+.schema-list li{list-style:none;display:flex;gap:12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-900)}
+.schema-list li::before{content:'';width:8px;height:8px;background:var(--red-600);flex-shrink:0}
 /* ============ CATÁLOGO ============ */
 .catalog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .catalog-card{border:1px solid var(--line);background:var(--paper-card);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease);position:relative}
@@ -217,7 +217,6 @@ section{padding:130px 0}
 .process-step p{font-size:13.5px;color:var(--steel);line-height:1.6}
 /* ============ SECTORES ============ */
 .sector-strip{background:var(--navy-950);color:var(--paper);padding:100px 0;overflow:hidden}
-.sector-strip .section-head{margin-bottom:54px}
 .sector-strip .section-head .desc{color:rgba(247,245,240,.6)}
 .sector-strip .section-head h2{color:#fff}
 .sector-tags{display:flex;flex-wrap:wrap;gap:14px}
@@ -299,7 +298,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .footer-bottom{flex-direction:column;align-items:flex-start}
   .comercial-tagline{font-size:11px;letter-spacing:.1em}
 }
-/* ============ MOVIMIENTO REDUCIDO ============ */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal,.hero .anim{opacity:1;transform:none}
@@ -364,7 +362,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     </div>
     <div class="hero-visual anim d3">
       <div class="hero-frame">
-        <img src="https://image.qwenlm.ai/public_source/09fd877c-3323-4e1b-a801-ee2aa120b977/1474e353c-1590-47b9-8b54-0840fb34d4c6.png" alt="Almacén de suministros industriales del sector petrolero y energético">
+        <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/ESCENCIA%20VEXPAR.png" alt="Esencia VEXPAR OPERACIONES">
         <span class="hero-frame-tag">Suministros especializados</span>
         <div class="hero-badge"><img src="https://image.qwenlm.ai/public_source/09fd877c-3323-4e1b-a801-ee2aa120b977/1d2c742d2-7894-44b8-b917-0969e39a9dab.png" alt="Logotipo VEXPAR OPERACIONES"></div>
       </div>
@@ -414,7 +412,9 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
       </div>
       <p class="desc">En VEXPAR OPERACIONES tenemos claro nuestro propósito: ofrecer soluciones integrales a la industria con equipos de alta calidad para la protección industrial y la seguridad del personal e infraestructura.</p>
     </div>
-    <div class="comercial-tagline reveal"><span>COMERCIALIZADORA</span> · <span>SERVICIOS</span> · <span>SOLUCIONES INTEGRALES</span></div>
+    <div class="comercial-tagline reveal">
+      <span>COMERCIALIZADORA</span> · <span>SERVICIOS</span> · <span>SOLUCIONES INTEGRALES</span>
+    </div>
     <div class="mv-grid">
       <div class="mv-card reveal">
         <div class="mv-icon">✦</div>
@@ -716,7 +716,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   });
   document.addEventListener('keydown', function(ev){ if(ev.key === 'Escape' && menuOpen) setMenu(false); });
 
-  /* ---- Reveal on scroll (con retardos) ---- */
+  /* ---- Reveal on scroll ---- */
   var revealEls = document.querySelectorAll('.reveal');
   var revealIO = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
@@ -771,7 +771,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   }, { threshold: 0.5 });
   document.querySelectorAll('.count').forEach(function(el){ counterIO.observe(el); });
 
-  /* ---- Esquema SVG animado al entrar en vista ---- */
+  /* ---- Esquema SVG animado ---- */
   var diagramWrap = document.getElementById('diagramWrap');
   if(diagramWrap){
     var diagramIO = new IntersectionObserver(function(entries){
