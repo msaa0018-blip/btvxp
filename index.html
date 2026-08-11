@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VEXPAR OPERACIONES — Suministros industriales especializados</title>
-<meta name="description" content="VEXPAR OPERACIONES: venta de suministros industriales especializados — herramientas, equipo de detección, equipo contra incendio y suministros varios — para los sectores petrolero y energético.">
+<meta name="description" content="VEXPAR OPERACIONES: venta de suministros industriales especializados — gas y fuego, construcción, seguridad industrial, aire respirable, protección personal y vías férreas — para los sectores energético, oil & gas, industrial y construcción.">
 <!-- Fuentes (Fontsource CDN) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/500.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/600.css">
@@ -32,6 +32,7 @@
 }
 html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+p,.desc,.lead{text-align:justify;text-align-last:left}
 ::selection{background:var(--red-600);color:#fff}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
@@ -106,7 +107,7 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .hero h1{font-size:clamp(36px,4.4vw,62px);color:#fff;max-width:18ch;margin:24px 0 26px}
 .hero-logo{margin-top:18px}
 .hero-logo img{height:192px;width:auto;display:block}
-.hero-strip{position:relative;margin:26px 0 6px;width:100vw;max-width:100vw;margin-left:-2cm}
+.hero-strip{position:relative;margin:14px 0 0 auto;width:50%}
 .hero-strip img{width:100%;height:auto;display:block}
 .hero h1 em{font-style:normal;color:var(--red-500)}
 .hero .lead{font-size:17px;color:rgba(247,245,240,.72);max-width:52ch;line-height:1.75}
@@ -252,7 +253,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .wrap{padding:0 28px}
   .hero{padding-top:130px}
   .hero-inner{grid-template-columns:minmax(0,1fr);padding-left:28px;padding-right:28px;max-width:1280px;margin-left:auto;margin-right:auto}
-  .hero-strip{margin-left:-28px}
+  .hero-strip{margin-left:0}
   .hero-visual{position:relative;top:auto;right:auto;width:100%;margin-left:0;margin-right:0}
   .hero-badge{left:16px}
   .mv-grid{grid-template-columns:repeat(2,1fr)}
@@ -340,11 +341,10 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   <div class="blueprint-grid"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <div class="eyebrow on-dark anim d1">Comercializadora · Servicios · Soluciones integrales</div>
+      <div class="eyebrow on-dark anim d1">SUMINISTROS - PROYECTOS - SOLUCIONES INTEGRALES</div>
       <div class="hero-logo anim d1"><img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="Logotipo VEXPAR OPERACIONES"></div>
       <h1 class="anim d2">Suministro industrial para procesos que <em>no pueden detenerse</em>.</h1>
-      <p class="lead anim d3">VEXPAR OPERACIONES se dedica a la venta de suministros industriales especializados para garantizar el correcto funcionamiento de los procesos industriales de sus clientes, con una amplia variedad de marcas, modelos y soluciones para los sectores petrolero y energético.</p>
-      <div class="hero-strip anim d3"><img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PIE%20DE%20VEXPAR.png" alt="VEXPAR OPERACIONES"></div>
+      <p class="lead anim d3">VEXPAR OPERACIONES empresa orgullosamente Guanajuatense, dedicada  a la venta de suministros industriales especializados para garantizar el correcto funcionamiento de los procesos industriales de sus clientes, con una amplia variedad de marcas, modelos y soluciones para los sectores energético, oil & gas, industrial y construcción.</p>
       <div class="hero-actions anim d4">
         <a href="#contacto" class="btn btn-primary">Solicitar cotización
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -352,7 +352,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
         <a href="#catalogo" class="btn btn-ghost">Ver catálogo</a>
       </div>
       <div class="hero-meta anim d5">
-        <span>Irapuato, Guanajuato</span><span class="dot"></span><span>Sectores petrolero y energético</span>
+        <span>Irapuato, Guanajuato</span><span class="dot"></span><span>Sectores energético, oil & gas, industrial y construcción</span>
       </div>
     </div>
     <!-- Imagen derecha: DOBLE del tamaño anterior (932px), tope 100% para no desbordar -->
@@ -361,6 +361,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
         <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/ESCENCIA%20VEXPAR.png" alt="Esencia VEXPAR OPERACIONES">
         <span class="hero-frame-tag">Suministros especializados</span>
       </div>
+      <div class="hero-strip"><img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PIE%20DE%20VEXPAR.png" alt="VEXPAR OPERACIONES"></div>
     </div>
   </div>
   <div class="scroll-cue"><span class="line"></span> Desplázate</div>
@@ -369,8 +370,8 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
 <!-- ===== TICKER ===== -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Herramientas industriales ✦</span><span>Equipo de detección ✦</span><span>Equipo contra incendio ✦</span><span>Suministros varios ✦</span><span>Sector petrolero ✦</span><span>Sector energético ✦</span>
-    <span>Herramientas industriales ✦</span><span>Equipo de detección ✦</span><span>Equipo contra incendio ✦</span><span>Suministros varios ✦</span><span>Sector petrolero ✦</span><span>Sector energético ✦</span>
+    <span>Gas y fuego ✦</span><span>Sector construcción ✦</span><span>Seguridad industrial ✦</span><span>Aire respirable ✦</span><span>Protección personal ✦</span><span>Vías férreas ✦</span>
+    <span>Gas y fuego ✦</span><span>Sector construcción ✦</span><span>Seguridad industrial ✦</span><span>Aire respirable ✦</span><span>Protección personal ✦</span><span>Vías férreas ✦</span>
   </div>
 </div>
 
@@ -378,13 +379,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
 <section class="clients">
   <div class="wrap">
     <div class="clients-label reveal">Sectores estratégicos</div>
-    <p style="color:rgba(247,245,240,.7);font-size:15px;max-width:56ch;margin-bottom:36px;" class="reveal">VEXPAR OPERACIONES atiende a organizaciones de los sectores petrolero y energético, donde la continuidad del suministro es una condición de operación, no un extra.</p>
-  </div>
-  <div class="wrap client-row reveal">
-    <span class="client-name">PEMEX</span>
-    <span class="client-name">IBERDROLA</span>
-    <span class="client-name">CENAGAS</span>
-    <span class="client-name">CENAM</span>
+    <p style="color:rgba(247,245,240,.7);font-size:15px;max-width:56ch;margin-bottom:36px;" class="reveal">VEXPAR OPERACIONES atiende a organizaciones de los sectores energético, oil & gas, industrial y construcción, donde la continuidad del suministro es una condición de operación, no un extra.</p>
   </div>
 </section>
 
@@ -438,13 +433,13 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
         <div class="eyebrow">Qué hacemos</div>
         <h2>Suministro especializado de bienes para la industria.</h2>
       </div>
-      <p class="desc">VEXPAR OPERACIONES se dedica a la venta de suministros industriales especializados, con una amplia variedad de marcas y modelos, para garantizar el correcto funcionamiento de los procesos industriales de sus clientes.</p>
+      <p class="desc">VEXPAR OPERACIONES atiende a organizaciones de los sectores energético, oil & gas, industrial y construcción, donde la continuidad del suministro es una condición de operación, no un extra.</p>
     </div>
     <div class="diff-list reveal">
       <div class="diff-item"><div class="diff-num">A</div><div><h3>Catálogo multimarca</h3><p>Amplia variedad de marcas y modelos disponibles, sin depender de un único fabricante, para encontrar la opción adecuada a cada proceso.</p></div></div>
-      <div class="diff-item"><div class="diff-num">B</div><div><h3>Enfoque en sectores estratégicos</h3><p>Atención a los sectores petrolero y energético, donde el correcto funcionamiento de los procesos industriales es una condición operativa crítica.</p></div></div>
-      <div class="diff-item"><div class="diff-num">C</div><div><h3>Confianza institucional</h3><p>Proveedor de organizaciones como PEMEX, Iberdrola, CENAGAS y CENAM en el suministro de bienes especializados.</p></div></div>
-      <div class="diff-item"><div class="diff-num">D</div><div><h3>Atención directa</h3><p>Con sede en Irapuato, Guanajuato, para dar seguimiento cercano a cada solicitud de suministro.</p></div></div>
+      <div class="diff-item"><div class="diff-num">B</div><div><h3>Enfoque en sectores estratégicos</h3><p>Atención a los sectores energético, oil & gas, industrial y construcción, donde el correcto funcionamiento de los procesos industriales es una condición operativa crítica.</p></div></div>
+      <div class="diff-item"><div class="diff-num">C</div><div><h3>Confianza institucional</h3><p>Proveedor de organizaciones de los sectores energético, oil & gas, industrial y construcción en el suministro de bienes especializados.</p></div></div>
+      <div class="diff-item"><div class="diff-num">D</div><div><h3>Atención directa</h3><p>Atención de proyectos con cobertura a nivel nacional.</p></div></div>
     </div>
   </div>
 </section>
@@ -487,51 +482,73 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
         <div class="eyebrow">Suministros industriales</div>
         <h2>Bienes especializados por categoría.</h2>
       </div>
-      <p class="desc">Amplia variedad de marcas y modelos organizados en cuatro categorías, para cubrir lo que cada proceso industrial requiere.</p>
+      <p class="desc">Amplia variedad de marcas y modelos organizados en seis categorías, para cubrir lo que cada proceso industrial requiere.</p>
     </div>
     <div class="catalog-grid reveal">
       <article class="catalog-card">
         <div class="catalog-visual"><span class="cat-index">CAT · 01</span>
-          <svg viewBox="0 0 100 100"><path d="M30 70 L45 55 M45 55 L38 48 a6 6 0 0 1 8-8 l20 20 a6 6 0 0 1-8 8 z"/><circle cx="68" cy="32" r="8"/></svg>
+          <svg viewBox="0 0 100 100"><path d="M50 18 c-3 12-16 20-16 36 a16 16 0 0 0 32 0 c0-7-3-12-6-16 c1 7-3 10-6 8 c3-10-1-20-4-28 z"/><path d="M34 68 a16 16 0 0 0 32 0"/></svg>
         </div>
         <div class="catalog-body">
           <div class="cat-eyebrow">Categoría 01</div>
-          <h3>Herramientas industriales</h3>
-          <p>Amplia variedad de marcas y modelos de herramienta para el mantenimiento y la operación de procesos industriales.</p>
-          <span class="service-tag">Multimarca · Mantenimiento</span>
+          <h3>Partes y refacciones para sistemas de gas y fuego</h3>
+          <p>Refacciones y componentes para equipo contra incendio, garantizando la operación continua de los sistemas de detección y extinción.</p>
+          <span class="service-tag">Equipo contra incendio</span>
         </div>
       </article>
       <article class="catalog-card">
         <div class="catalog-visual"><span class="cat-index">CAT · 02</span>
-          <svg viewBox="0 0 100 100"><circle cx="50" cy="62" r="7"/><path d="M50 55 V26"/><path d="M35 45 a21 21 0 0 1 30 0"/><path d="M25 35 a35 35 0 0 1 50 0"/></svg>
+          <svg viewBox="0 0 100 100"><rect x="22" y="30" width="56" height="44" rx="2"/><path d="M22 40 h56 M38 30 v-8 h24 v8"/></svg>
         </div>
         <div class="catalog-body">
           <div class="cat-eyebrow">Categoría 02</div>
-          <h3>Equipo de detección</h3>
-          <p>Detectores especializados para el monitoreo y control de procesos industriales en sectores de alta exigencia.</p>
-          <span class="service-tag">Monitoreo · Control</span>
+          <h3>Suministros para el sector construcción</h3>
+          <p>Bienes especializados para atender los requerimientos de obra y proyectos del sector construcción.</p>
+          <span class="service-tag">Sector construcción</span>
         </div>
       </article>
       <article class="catalog-card">
         <div class="catalog-visual"><span class="cat-index">CAT · 03</span>
-          <svg viewBox="0 0 100 100"><path d="M50 18 c-3 12-16 20-16 36 a16 16 0 0 0 32 0 c0-7-3-12-6-16 c1 7-3 10-6 8 c3-10-1-20-4-28 z"/><path d="M34 68 a16 16 0 0 0 32 0"/></svg>
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="62" r="7"/><path d="M50 55 V26"/><path d="M35 45 a21 21 0 0 1 30 0"/><path d="M25 35 a35 35 0 0 1 50 0"/></svg>
         </div>
         <div class="catalog-body">
           <div class="cat-eyebrow">Categoría 03</div>
-          <h3>Equipo contra incendio</h3>
-          <p>Soluciones y equipo especializado contra incendio para proteger instalaciones y procesos críticos.</p>
-          <span class="service-tag">Protección · Instalaciones</span>
+          <h3>Seguridad industrial, mantenimiento e inspección</h3>
+          <p>Suministros relacionados con seguridad industrial, mantenimiento, instrumentación e inspección técnica de procesos.</p>
+          <span class="service-tag">Mantenimiento · Instrumentación</span>
         </div>
       </article>
       <article class="catalog-card">
         <div class="catalog-visual"><span class="cat-index">CAT · 04</span>
-          <svg viewBox="0 0 100 100"><rect x="22" y="30" width="56" height="44" rx="2"/><path d="M22 40 h56 M38 30 v-8 h24 v8"/></svg>
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="14"/><path d="M50 54 v18 M40 62 h20"/></svg>
         </div>
         <div class="catalog-body">
           <div class="cat-eyebrow">Categoría 04</div>
-          <h3>Suministros varios</h3>
-          <p>Bienes especializados adicionales para garantizar el correcto funcionamiento de la operación de cada cliente.</p>
-          <span class="service-tag">Operación continua</span>
+          <h3>Aire respirable y equipo de respiración autónoma</h3>
+          <p>Aire respirable, compresores y equipo de respiración autónoma para entornos de riesgo controlado.</p>
+          <span class="service-tag">Aire respirable · Compresores</span>
+        </div>
+      </article>
+      <article class="catalog-card">
+        <div class="catalog-visual"><span class="cat-index">CAT · 05</span>
+          <svg viewBox="0 0 100 100"><path d="M30 70 L45 55 M45 55 L38 48 a6 6 0 0 1 8-8 l20 20 a6 6 0 0 1-8 8 z"/><circle cx="68" cy="32" r="8"/></svg>
+        </div>
+        <div class="catalog-body">
+          <div class="cat-eyebrow">Categoría 05</div>
+          <h3>Equipo de protección personal especializado</h3>
+          <p>Equipo de protección personal especializado para el resguardo del personal en procesos de alta exigencia.</p>
+          <span class="service-tag">Protección personal</span>
+        </div>
+      </article>
+      <article class="catalog-card">
+        <div class="catalog-visual"><span class="cat-index">CAT · 06</span>
+          <svg viewBox="0 0 100 100"><path d="M18 74 h64 M26 74 V50 h48 v24"/><path d="M18 50 h64" stroke-dasharray="4 6"/></svg>
+        </div>
+        <div class="catalog-body">
+          <div class="cat-eyebrow">Categoría 06</div>
+          <h3>Suministros para vías férreas</h3>
+          <p>Bienes especializados relacionados con vías férreas para el mantenimiento y operación de la infraestructura ferroviaria.</p>
+          <span class="service-tag">Infraestructura ferroviaria</span>
         </div>
       </article>
     </div>
@@ -564,17 +581,15 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     <div class="section-head reveal">
       <div>
         <div class="eyebrow on-dark">Sectores atendidos</div>
-        <h2>Petrolero y energético.</h2>
+        <h2>Energético, oil & gas, industrial y construcción.</h2>
       </div>
-      <p class="desc">VEXPAR OPERACIONES concentra su catálogo y su atención en estos dos sectores, incluyendo organismos e instituciones como PEMEX, Iberdrola, CENAGAS y CENAM.</p>
+      <p class="desc">VEXPAR OPERACIONES concentra su catálogo y su atención en estos sectores estratégicos.</p>
     </div>
     <div class="sector-tags reveal">
-      <span class="sector-tag">Sector petrolero</span>
       <span class="sector-tag">Sector energético</span>
-      <span class="sector-tag">PEMEX</span>
-      <span class="sector-tag">Iberdrola</span>
-      <span class="sector-tag">CENAGAS</span>
-      <span class="sector-tag">CENAM</span>
+      <span class="sector-tag">Oil & Gas</span>
+      <span class="sector-tag">Industrial</span>
+      <span class="sector-tag">Construcción</span>
     </div>
   </div>
 </section>
@@ -593,9 +608,8 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
       <div class="contact-info">
         <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="VEXPAR OPERACIONES">
         <h3>VEXPAR OPERACIONES</h3>
-        <p>Venta de suministros industriales especializados para los sectores petrolero y energético, operando desde Irapuato, Guanajuato.</p>
+        <p>Venta de suministros industriales especializados para los sectores energético, oil & gas, industrial y construcción, operando desde Irapuato, Guanajuato.</p>
         <div class="contact-detail"><div class="k">Correo</div><div class="v">contacto@vexpar.com.mx</div></div>
-        <div class="contact-detail"><div class="k">Dirección</div><div class="v">Privada del Copalillo #298 E, lote 12, Colonia El Copalillo, 36800 Irapuato, Gto.</div></div>
       </div>
       <div class="contact-form">
         <form id="quoteForm" novalidate>
@@ -607,9 +621,12 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
             <div class="field"><label for="femail">Correo *</label><input type="email" id="femail" name="femail" required autocomplete="email"></div>
             <div class="field"><label for="fsector">Categoría de interés</label>
               <select id="fsector" name="fsector">
-                <option>Herramientas industriales</option>
-                <option>Equipo de detección</option>
-                <option>Equipo contra incendio</option>
+                <option>Partes y refacciones para sistemas de gas y fuego</option>
+                <option>Suministros para el sector construcción</option>
+                <option>Seguridad industrial, mantenimiento e inspección</option>
+                <option>Aire respirable y equipo de respiración autónoma</option>
+                <option>Equipo de protección personal especializado</option>
+                <option>Suministros para vías férreas</option>
                 <option>Suministros varios</option>
               </select>
             </div>
@@ -633,7 +650,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     <div class="footer-top">
       <div>
         <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="VEXPAR OPERACIONES">
-        <p>Venta de suministros industriales especializados para los sectores petrolero y energético.</p>
+        <p>Venta de suministros industriales especializados para los sectores energético, oil & gas, industrial y construcción.</p>
       </div>
       <div class="footer-col">
         <h5>Negocio</h5>
