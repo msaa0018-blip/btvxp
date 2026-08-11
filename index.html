@@ -162,11 +162,11 @@ section{padding:130px 0}
 .mv-card h3{font-size:20px;margin-bottom:14px}
 .mv-card p{color:var(--steel);font-size:15px;line-height:1.7}
 .mv-card .mv-tag{display:inline-block;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--red-600);padding:6px 14px;border:1px solid var(--line);border-radius:30px}
-.valores-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
-.valor-item{background:var(--paper);padding:12px 8px;text-align:center;border-radius:8px;border:1px solid var(--line);transition:all .3s var(--ease)}
-.valor-item:hover{transform:translateY(-3px);border-color:var(--red-600);box-shadow:0 8px 20px -12px rgba(20,22,79,.15)}
-.valor-item .valor-num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--red-600);font-weight:600;margin-bottom:4px;display:block}
-.valor-item .valor-nombre{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--navy-900)}
+.valores-list{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:0}
+.valores-list li{display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.valores-list li:last-child{border-bottom:none}
+.valores-list .valor-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--red-600);font-weight:600}
+.valores-list .valor-nombre{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:var(--navy-900)}
 /* ============ DIFERENCIADORES ============ */
 .diff-list{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
 .diff-item{padding:44px 4px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:110px 1fr;gap:24px;align-items:start;transition:background .3s}
@@ -261,7 +261,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .hero-visual{position:relative;top:auto;right:auto;width:100%;margin-left:0;margin-right:0}
   .hero-badge{left:16px}
   .mv-grid{grid-template-columns:repeat(2,1fr)}
-  .valores-grid{grid-template-columns:repeat(3,1fr)}
   .diff-list{grid-template-columns:1fr}
   .diff-item:nth-child(odd){border-right:none;padding-right:4px}
   .diff-item:nth-child(even){padding-left:4px}
@@ -284,7 +283,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .hero-frame-tag{font-size:9px;padding:6px 10px}
   .scroll-cue{left:28px}
   .mv-grid{grid-template-columns:1fr}
-  .valores-grid{grid-template-columns:repeat(2,1fr)}
   .catalog-grid{grid-template-columns:1fr}
   .client-name{font-size:18px;margin-right:24px;padding-right:24px}
   .process-track{grid-template-columns:1fr}
@@ -419,13 +417,13 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
         <div class="mv-icon">◆</div>
         <h3>Valores</h3>
         <p>Los principios que rigen cada una de nuestras operaciones y relaciones comerciales.</p>
-        <div class="valores-grid">
-          <div class="valor-item"><span class="valor-num">01</span><span class="valor-nombre">Compromiso</span></div>
-          <div class="valor-item"><span class="valor-num">02</span><span class="valor-nombre">Honestidad</span></div>
-          <div class="valor-item"><span class="valor-num">03</span><span class="valor-nombre">Diligencia</span></div>
-          <div class="valor-item"><span class="valor-num">04</span><span class="valor-nombre">Equidad</span></div>
-          <div class="valor-item"><span class="valor-num">05</span><span class="valor-nombre">Adaptabilidad</span></div>
-        </div>
+        <ul class="valores-list">
+          <li><span class="valor-num">01</span><span class="valor-nombre">Compromiso</span></li>
+          <li><span class="valor-num">02</span><span class="valor-nombre">Honestidad</span></li>
+          <li><span class="valor-num">03</span><span class="valor-nombre">Diligencia</span></li>
+          <li><span class="valor-num">04</span><span class="valor-nombre">Equidad</span></li>
+          <li><span class="valor-num">05</span><span class="valor-nombre">Adaptabilidad</span></li>
+        </ul>
       </div>
     </div>
   </div>
