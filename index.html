@@ -213,7 +213,6 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .client-name:hover{color:#fff}
 /* ============ SECCIONES ============ */
 section{padding:130px 0}
-#esquema{padding:0 0}
 #quienes-somos{padding-top:70px}
 #lineas{padding-bottom:60px}
 #catalogo{padding-top:60px}
@@ -245,18 +244,6 @@ section{padding:130px 0}
 .diff-num{font-family:var(--font-display);font-size:15px;color:var(--steel-light);padding-top:4px}
 .diff-item h3{font-size:20px;margin-bottom:10px}
 .diff-item p{color:var(--steel);font-size:14.5px;line-height:1.7;max-width:42ch}
-/* ============ ESQUEMA ============ */
-.standalone-diagram{width:100%;max-width:500px;margin:0 auto}
-.standalone-diagram svg{width:100%;height:auto}
-.schema-line{fill:none;stroke:rgba(20,22,79,.35);stroke-width:1.2;stroke-linecap:round;stroke-dasharray:2200;stroke-dashoffset:2200}
-.schema-accent{stroke:var(--red-500);stroke-width:1.6}
-.schema-node{fill:var(--navy-950);stroke:rgba(20,22,79,.45);stroke-width:1.2;opacity:0}
-.schema-node.accent{stroke:var(--red-500);fill:var(--red-600)}
-.schema-label{font-family:'IBM Plex Mono',monospace;font-size:13.5px;fill:rgba(20,22,79,.55);letter-spacing:.06em;opacity:0}
-.play .schema-line{animation:draw .78s var(--ease) forwards}
-.play .schema-node{animation:fadein .26s ease forwards}
-.play .schema-node:nth-of-type(1){animation-delay:.33s}.play .schema-node:nth-of-type(2){animation-delay:.39s}.play .schema-node:nth-of-type(3){animation-delay:.42s}.play .schema-node:nth-of-type(4){animation-delay:.46s}.play .schema-node:nth-of-type(5){animation-delay:.49s}.play .schema-node:nth-of-type(6){animation-delay:.52s}.play .schema-node:nth-of-type(7){animation-delay:.55s}
-.play .schema-label{animation:fadein .26s ease forwards;animation-delay:1.04s}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fadein{to{opacity:1}}
 /* ============ CATÁLOGO ============ */
@@ -402,8 +389,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal,.hero .anim{opacity:1;transform:none}
   .mv-grid .mv-card,.catalog-grid .catalog-card,.diff-list .diff-item,.process-track .process-step{opacity:1;transform:none}
-  .schema-line{stroke-dashoffset:0}
-  .schema-node,.schema-label{opacity:1}
   html{scroll-behavior:auto}
 }
 </style>
@@ -562,35 +547,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   </div>
 </section>
 
-<!-- ===== ESQUEMA ===== -->
-<section id="esquema" class="alt-bg">
-  <div class="wrap" style="display:flex;justify-content:center;">
-    <div class="standalone-diagram reveal" id="diagramWrap" aria-hidden="true">
-      <svg viewBox="-40 20 540 440" fill="none">
-        <line class="schema-line" x1="230" y1="240" x2="230" y2="90"/>
-        <line class="schema-line" x1="230" y1="240" x2="373" y2="163"/>
-        <line class="schema-line" x1="230" y1="240" x2="373" y2="317"/>
-        <line class="schema-line schema-accent" x1="230" y1="240" x2="230" y2="390"/>
-        <line class="schema-line" x1="230" y1="240" x2="87" y2="317"/>
-        <line class="schema-line" x1="230" y1="240" x2="87" y2="163"/>
-        <circle class="schema-node accent" cx="230" cy="240" r="30"/>
-        <circle class="schema-node" cx="230" cy="90" r="15"/>
-        <circle class="schema-node" cx="373" cy="163" r="15"/>
-        <circle class="schema-node" cx="373" cy="317" r="15"/>
-        <circle class="schema-node accent" cx="230" cy="390" r="15"/>
-        <circle class="schema-node" cx="87" cy="317" r="15"/>
-        <circle class="schema-node" cx="87" cy="163" r="15"/>
-        <text class="schema-label" x="230" y="240" text-anchor="middle" dominant-baseline="central" style="font-size:13.5px;font-weight:600;fill:#fff">VEXPAR</text>
-        <text class="schema-label" x="230" y="58" text-anchor="middle">ENERGÍA</text>
-        <text class="schema-label" x="404" y="163" text-anchor="start" dominant-baseline="middle">DETECCIÓN</text>
-        <text class="schema-label" x="404" y="317" text-anchor="start" dominant-baseline="middle">INCENDIO</text>
-        <text class="schema-label" x="230" y="428" text-anchor="middle">PETRÓLEO Y GAS</text>
-        <text class="schema-label" x="56" y="317" text-anchor="end" dominant-baseline="middle">SUMINISTROS</text>
-        <text class="schema-label" x="56" y="163" text-anchor="end" dominant-baseline="middle">HERRAMIENTAS</text>
-      </svg>
-    </div>
-  </div>
-</section>
 
 <!-- ===== CATÁLOGO ===== -->
 <section id="catalogo">
@@ -860,19 +816,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
   document.querySelectorAll('section[id]').forEach(function(sec){ sectionIO.observe(sec); });
-
-  var diagramWrap = document.getElementById('diagramWrap');
-  if(diagramWrap){
-    var diagramIO = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          diagramWrap.classList.add('play');
-          diagramIO.unobserve(diagramWrap);
-        }
-      });
-    }, { threshold: 0.1 });
-    diagramIO.observe(diagramWrap);
-  }
 
   var toastTimer = null;
   function showToast(){
