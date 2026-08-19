@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/500.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/600.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.0/700.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/500.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/600.css">
@@ -49,26 +48,6 @@
   --ticker-color:var(--navy-950);
   --process-dot-hover-color:#fff;
 }
-body.theme-lujo{
-  /* ---- Variables de tema (Estilo B · Ejecutivo/Lujo) ---- */
-  --navy-950:#080A1A; --navy-900:#0D1226; --navy-800:#141A38; --navy-700:#1C2447;
-  --red-600:#C9A44C; --red-500:#DFC077;
-  --oxblood:#5C1A24;
-  --font-display:'Fraunces',serif;
-  --eyebrow-dark-color:var(--red-500);
-  --btn-primary-bg:var(--navy-950);
-  --btn-primary-color:var(--red-600);
-  --btn-primary-border:var(--red-600);
-  --btn-primary-hover-bg:var(--navy-800);
-  --btn-primary-hover-shadow:rgba(201,164,76,.35);
-  --hero-frame-border:rgba(223,192,119,.4);
-  --hero-tag-color:var(--navy-950);
-  --catalog-gradient:rgba(92,26,36,.35);
-  --sector-hover-bg:rgba(201,164,76,.14);
-  --ticker-bg:#F7F5F0;
-  --ticker-color:var(--navy-950);
-  --process-dot-hover-color:var(--navy-950);
-}
 body{transition:background-color .5s var(--ease)}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -104,24 +83,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-.02e
 .catalog-card:hover::before{transform:scaleX(1)}
 .process-step:hover .process-dot{background:var(--red-600);border-color:var(--red-600);color:var(--process-dot-hover-color);transform:scale(1.12)}
 .sector-tag:hover{border-color:var(--red-500);color:#fff;background:var(--sector-hover-bg);transform:translateY(-2px)}
-}
-/* ============ SWITCHER DE ESTILO ============ */
-.style-switcher{position:fixed;top:80px;right:48px;z-index:130;display:flex;gap:2px;background:rgba(10,11,46,.72);backdrop-filter:blur(10px);border:1px solid var(--line-dark);border-radius:30px;padding:4px;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
-.style-switcher button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,245,240,.6);background:transparent;border:none;padding:9px 16px;border-radius:24px;transition:background-color .2s var(--ease-out),color .2s var(--ease-out),transform .16s var(--ease-out)}
-.style-switcher button:active{transform:scale(.94)}
-.style-switcher button:hover{color:#fff}
-.style-switcher button.active{background:var(--red-600);color:var(--hero-tag-color)}
-@media (max-width:900px){
-  .style-switcher{display:none}
-}
-body.menu-open .style-switcher{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s var(--ease-out)}
-/* ============ TOGGLE CIRCULAR (solo móvil) ============ */
-.style-toggle{display:none}
-@media (max-width:900px){
-  .style-toggle{display:flex;align-items:center;justify-content:center;position:fixed;left:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));width:52px;height:52px;border-radius:50%;border:1px solid var(--line-dark);background:var(--red-600);color:var(--hero-tag-color);z-index:130;box-shadow:0 10px 24px -8px rgba(0,0,0,.6);transition:background-color .3s var(--ease-out),transform .16s var(--ease-out)}
-  .style-toggle:active{transform:scale(.92)}
-  .style-toggle svg{width:20px;height:20px}
-  body.menu-open .style-toggle{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s var(--ease-out)}
 }
 /* ============ PROGRESO & EXTRAS ============ */
 .progress-bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--red-500);z-index:200}
@@ -392,7 +353,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .hero .lead{font-size:15.5px}
   .btn{padding:12px 20px;font-size:12px}
   .hero-actions{gap:12px}
-  .style-toggle{width:46px;height:46px;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}
   .back-top{right:16px;bottom:16px;width:40px;height:40px}
   .footer-top img{height:36px}
 }
@@ -414,13 +374,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
 </style>
 </head>
 <body>
-<div class="style-switcher" role="group" aria-label="Selector de estilo visual">
-  <button type="button" id="btnEstiloA" class="active" aria-pressed="true">Industrial</button>
-  <button type="button" id="btnEstiloB" aria-pressed="false">Ejecutivo</button>
-</div>
-<button type="button" class="style-toggle" id="styleToggle" aria-pressed="false" aria-label="Cambiar a estilo ejecutivo">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>
-</button>
 <div class="progress-bar" id="progressBar"></div>
 
 <!-- ===== HEADER ===== -->
@@ -864,28 +817,6 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
 
   document.getElementById('yearNow').textContent = new Date().getFullYear();
 
-  // ===== SWITCHER DE ESTILO (Industrial / Ejecutivo) =====
-  var btnA = document.getElementById('btnEstiloA');
-  var btnB = document.getElementById('btnEstiloB');
-  var toggleBtn = document.getElementById('styleToggle');
-  var currentStyle = 'industrial';
-  function setStyle(style){
-    currentStyle = style;
-    document.body.classList.toggle('theme-lujo', style === 'lujo');
-    btnA.classList.toggle('active', style !== 'lujo');
-    btnB.classList.toggle('active', style === 'lujo');
-    btnA.setAttribute('aria-pressed', String(style !== 'lujo'));
-    btnB.setAttribute('aria-pressed', String(style === 'lujo'));
-    toggleBtn.setAttribute('aria-pressed', String(style === 'lujo'));
-    toggleBtn.setAttribute('aria-label', style === 'lujo' ? 'Cambiar a estilo industrial' : 'Cambiar a estilo ejecutivo');
-    try{ localStorage.setItem('vexpar-style', style); }catch(e){}
-  }
-  btnA.addEventListener('click', function(){ setStyle('industrial'); });
-  btnB.addEventListener('click', function(){ setStyle('lujo'); });
-  toggleBtn.addEventListener('click', function(){ setStyle(currentStyle === 'lujo' ? 'industrial' : 'lujo'); });
-  var savedStyle = null;
-  try{ savedStyle = localStorage.getItem('vexpar-style'); }catch(e){}
-  if(savedStyle === 'lujo') setStyle('lujo');
 })();
 </script>
 </body>
