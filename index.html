@@ -180,12 +180,8 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .hero-frame::before{content:'';position:absolute;inset:0;transform:translate(14px,14px);border:1px solid var(--hero-frame-border);z-index:0}
 .hero-frame img{position:relative;z-index:1;width:100%;height:auto;display:block;background:transparent}
 .hero-frame-tag{position:absolute;z-index:2;top:16px;right:-12px;background:var(--red-600);color:var(--hero-tag-color);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;padding:8px 14px;text-transform:uppercase;font-weight:600}
-.hero-frame-logo{display:flex;justify-content:center;align-items:center;width:100%;margin-bottom:11px}
-.hero-frame-logo img{height:225px;width:auto;display:block}
-@media (max-width:720px){
-  .hero-frame-logo{margin-bottom:8px}
-  .hero-frame-logo img{height:143px}
-}
+.hero-frame-logo{display:flex;justify-content:center;align-items:center;width:100%;margin-bottom:clamp(6px,1.4vw,11px)}
+.hero-frame-logo img{height:clamp(120px,20vw,225px);width:auto;display:block}
 .hero-badge{position:absolute;z-index:2;left:-26px;bottom:30px;background:var(--navy-950);border:1px solid var(--line-dark);padding:14px 18px;animation:floaty 5s ease-in-out infinite}
 .hero-badge img{height:44px;width:auto}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
@@ -360,6 +356,31 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .footer-top{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;align-items:flex-start}
   .comercial-tagline{font-size:11px;letter-spacing:.1em}
+}
+/* ============ PANTALLAS ULTRA-ANCHAS (>1600px) ============ */
+@media (min-width:1600px){
+  .hero-inner{max-width:1900px;margin-left:auto;margin-right:auto;padding-left:48px}
+}
+/* ============ TELÉFONOS PEQUEÑOS (≤400px) ============ */
+@media (max-width:400px){
+  .wrap{padding:0 18px}
+  .hero-inner{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:28px}
+  .hero .lead{font-size:15.5px}
+  .btn{padding:12px 20px;font-size:12px}
+  .hero-actions{gap:12px}
+  .style-switcher button{padding:8px 12px;font-size:9.5px}
+  .back-top{right:16px;bottom:16px;width:40px;height:40px}
+  .footer-top img{height:36px}
+}
+/* ============ MÓVIL EN HORIZONTAL (viewport bajo) ============ */
+@media (max-height:500px) and (orientation:landscape){
+  .hero{padding:96px 0 48px}
+  .hero-inner{gap:24px}
+  .hero .lead{max-width:60ch}
+  .mobile-menu{gap:14px;padding:20px 0;overflow-y:auto}
+  .mobile-menu a.m-link{font-size:19px}
+  .mobile-menu .m-logo img{height:36px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
