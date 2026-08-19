@@ -134,15 +134,15 @@ body.menu-open .style-switcher{opacity:0;visibility:hidden;pointer-events:none;t
 .toast.show{transform:translate(-50%,0);opacity:1}
 /* ============ HEADER ============ */
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:all .4s var(--ease);background:linear-gradient(rgba(10,11,46,.55),rgba(10,11,46,0))}
-.logo-panel{position:relative;display:flex;align-items:center;padding-right:24px}
+.logo-panel{position:relative;display:flex;align-items:center;justify-content:center;width:clamp(220px,22vw,340px);flex-shrink:0}
 .logo-panel::before{content:'';position:absolute;top:-18px;bottom:-18px;left:-100vw;right:0;background:#F7F5F0;clip-path:polygon(-100vw 0,100% 0,calc(100% - 22px) 100%,-100vw 100%);z-index:-1;transition:top .4s var(--ease),bottom .4s var(--ease)}
 header.scrolled .logo-panel::before{top:-10px;bottom:-10px}
 .header-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-start;gap:0}
 header.scrolled{padding:10px 0;background:rgba(10,11,46,.9);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
 nav.primary-nav{margin-left:6px}
 .logo{display:inline-flex;align-items:center}
-.logo img{height:48px;width:auto;transition:height .4s var(--ease),opacity .4s var(--ease);opacity:0;display:block}
-header.scrolled .logo img{height:40px;opacity:1}
+.logo img{height:48px;width:auto;transition:height .4s var(--ease);display:block}
+header.scrolled .logo img{height:40px}
 nav.primary-nav{display:flex;align-items:center;gap:34px}
 nav.primary-nav a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(247,245,240,.72);position:relative;padding-bottom:4px;transition:color .3s}
 nav.primary-nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--red-500);transition:width .3s var(--ease)}
@@ -340,6 +340,9 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .section-head{grid-template-columns:1fr;gap:20px}
 }
 @media (max-width:900px){
+  header,header.scrolled{padding:10px 0}
+  .logo img,header.scrolled .logo img{height:40px}
+  .logo-panel::before,header.scrolled .logo-panel::before{top:-10px;bottom:-10px}
   nav.primary-nav,.nav-right .btn{display:none}
   .burger{display:block}
   #proceso,#sectores{display:none}
