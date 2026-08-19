@@ -112,8 +112,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-.02e
 .style-switcher button:hover{color:#fff}
 .style-switcher button.active{background:var(--red-600);color:var(--hero-tag-color)}
 @media (max-width:900px){
-  .style-switcher{top:auto;bottom:26px;left:50%;right:auto;transform:translateX(-50%)}
+  .style-switcher{top:auto;bottom:calc(88px + env(safe-area-inset-bottom,0px));left:50%;right:auto;transform:translateX(-50%);padding:5px;box-shadow:0 10px 24px -8px rgba(0,0,0,.6)}
+  .style-switcher button{padding:11px 18px;font-size:11px}
 }
+body.menu-open .style-switcher{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s var(--ease-out)}
 /* ============ PROGRESO & EXTRAS ============ */
 .progress-bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--red-500);z-index:200}
 .back-top{position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--navy-900);color:#fff;display:flex;align-items:center;justify-content:center;z-index:90;opacity:0;transform:translateY(16px);pointer-events:none;transition:all .4s var(--ease)}
@@ -337,12 +339,16 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
 @media (max-width:900px){
   nav.primary-nav,.nav-right .btn{display:none}
   .burger{display:block}
+  #proceso,#sectores{display:none}
+  a[href="#proceso"],a[href="#sectores"]{display:none}
 }
 @media (max-width:720px){
   section{padding:84px 0}
   .hero{padding:120px 0 90px}
   .hero h1{font-size:34px;max-width:none}
   .hero-inner{grid-template-columns:1fr;padding-left:20px;padding-right:20px}
+  .hero-copy{order:2}
+  .hero-visual{order:1;margin-bottom:32px}
   .hero-badge{left:-8px;bottom:14px;padding:10px 14px}
   .hero-badge img{height:32px}
   .hero-frame-tag{font-size:9px;padding:6px 10px}
@@ -369,7 +375,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .hero .lead{font-size:15.5px}
   .btn{padding:12px 20px;font-size:12px}
   .hero-actions{gap:12px}
-  .style-switcher button{padding:8px 12px;font-size:9.5px}
+  .style-switcher button{padding:11px 14px;font-size:9.5px}
   .back-top{right:16px;bottom:16px;width:40px;height:40px}
   .footer-top img{height:36px}
 }
