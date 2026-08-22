@@ -102,7 +102,7 @@ header.scrolled .logo-panel::before{top:-10px;bottom:-10px}
 header.scrolled{padding:10px 0;background:rgba(10,11,46,.9);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
 nav.primary-nav{margin-left:6px;margin-right:32px}
 .logo{display:inline-flex;align-items:center;transform:translateX(calc(-1 * (max(24px,(100vw - 1280px) / 4 + 24px) + .35 * clamp(110px,11vw,170px))))}
-.logo img{height:64px;width:auto;max-width:none;transition:height .4s var(--ease),filter .4s var(--ease);display:block;filter:brightness(1.5) drop-shadow(0 0 18px rgba(255,255,255,1)) drop-shadow(0 0 39px rgba(255,255,255,1)) drop-shadow(0 0 69px rgba(255,255,255,.85)) drop-shadow(0 0 105px rgba(255,255,255,.5))}
+.logo img{height:64px;width:auto;max-width:none;transition:height .4s var(--ease);display:block}
 header.scrolled .logo img{height:52px}
 nav.primary-nav{display:flex;align-items:center;gap:34px}
 nav.primary-nav a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(247,245,240,.72);position:relative;padding-bottom:4px;transition:color .3s}
@@ -161,7 +161,7 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .hero-frame img{position:relative;z-index:1;width:100%;height:auto;display:block;background:transparent}
 .hero-frame-tag{position:absolute;z-index:2;top:16px;right:-12px;background:var(--red-600);color:var(--hero-tag-color);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;padding:8px 14px;text-transform:uppercase;font-weight:600}
 .hero-frame-logo{display:flex;justify-content:center;align-items:center;width:100%;margin-bottom:clamp(6px,1.4vw,11px)}
-.hero-frame-logo img{height:clamp(120px,20vw,225px);width:auto;display:block}
+.hero-frame-logo img{height:clamp(120px,20vw,225px);width:auto;display:block;filter:brightness(1.6) drop-shadow(0 0 20px rgba(255,255,255,1)) drop-shadow(0 0 44px rgba(255,255,255,1)) drop-shadow(0 0 78px rgba(255,255,255,.85)) drop-shadow(0 0 120px rgba(255,255,255,.55))}
 .hero-badge{position:absolute;z-index:2;left:-26px;bottom:30px;background:var(--navy-950);border:1px solid var(--line-dark);padding:14px 18px;animation:floaty 5s ease-in-out infinite}
 .hero-badge img{height:44px;width:auto}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
