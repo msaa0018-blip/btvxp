@@ -21,7 +21,7 @@
   --ink:#14161F; --steel:#63636F; --steel-light:#9A98A3;
   --line:rgba(20,22,79,.12); --line-dark:rgba(247,245,240,.14);
   /* LOGO oficial */
-  --logo-url:url('https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACA%202.png');
+  --logo-url:url('https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACAS%203.avif');
   /* Imagen derecha: doble del tamaño anterior (466px x2 = 932px), tope 100% para no desbordar */
   --hero-img-w:2072px;
   --radius:3px; --ease:cubic-bezier(.16,.84,.44,1);
@@ -151,7 +151,10 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .hero-frame img{position:relative;z-index:1;width:100%;height:auto;display:block;background:transparent}
 .hero-frame-tag{position:absolute;z-index:2;top:16px;right:-12px;background:var(--red-600);color:var(--hero-tag-color);font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.14em;padding:8px 14px;text-transform:uppercase;font-weight:600}
 .hero-frame-logo{display:flex;justify-content:center;align-items:center;width:100%;margin-bottom:clamp(6px,1.4vw,11px)}
-.hero-frame-logo img{height:clamp(120px,20vw,225px);width:auto;display:block}
+.plate-badge{position:relative;display:inline-flex;align-items:center;justify-content:center;aspect-ratio:740/444;flex-shrink:0}
+.plate-badge .plate-bg{width:100%;height:100%;object-fit:contain;display:block}
+.plate-badge .plate-mark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58%;height:auto;display:block}
+.hero-frame-logo .plate-badge{height:clamp(120px,20vw,225px)}
 .hero-badge{position:absolute;z-index:2;left:-26px;bottom:30px;background:var(--navy-950);border:1px solid var(--line-dark);padding:14px 18px;animation:floaty 5s ease-in-out infinite}
 .hero-badge img{height:44px;width:auto}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
@@ -245,7 +248,7 @@ section{padding:130px 0}
 /* ============ CONTACTO ============ */
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .contact-info{background:var(--navy-900);color:var(--paper);padding:56px 48px}
-.contact-info img{height:56px;width:auto;margin-bottom:26px;filter:brightness(1.05)}
+.contact-info .plate-badge{height:56px;margin-bottom:26px}
 .contact-info h3{color:#fff;font-size:24px;margin-bottom:18px}
 .contact-info p{color:rgba(247,245,240,.65);font-size:14.5px;line-height:1.75;margin-bottom:36px}
 .contact-detail{padding:18px 0;border-top:1px solid var(--line-dark)}
@@ -264,7 +267,7 @@ section{padding:130px 0}
 /* ============ FOOTER ============ */
 footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32px}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--line-dark)}
-.footer-top img{height:44px;width:auto;margin-bottom:18px;filter:brightness(1.05)}
+.footer-top .plate-badge{height:44px;margin-bottom:18px}
 .footer-top p{font-size:13.5px;line-height:1.7;max-width:32ch;color:rgba(247,245,240,.45)}
 .footer-col h5{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,245,240,.4);margin-bottom:18px}
 .footer-col a{display:block;font-size:14px;color:rgba(247,245,240,.7);margin-bottom:12px;transition:all .3s var(--ease)}
@@ -348,7 +351,7 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   .btn{padding:12px 20px;font-size:12px}
   .hero-actions{gap:12px}
   .back-top{right:16px;bottom:16px;width:40px;height:40px}
-  .footer-top img{height:36px}
+  .footer-top .plate-badge{height:36px}
 }
 /* ============ MÓVIL EN HORIZONTAL (viewport bajo) ============ */
 @media (max-height:500px) and (orientation:landscape){
@@ -428,7 +431,12 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     </div>
     <!-- Imagen derecha: DOBLE del tamaño anterior (932px), tope 100% para no desbordar -->
     <div class="hero-visual anim d3">
-      <div class="hero-frame-logo"><img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACA%202.png" alt="Logotipo VEXPAR OPERACIONES"></div>
+      <div class="hero-frame-logo">
+        <span class="plate-badge">
+          <img class="plate-bg" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACAS%203.avif" alt="">
+          <img class="plate-mark" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="Logotipo VEXPAR OPERACIONES">
+        </span>
+      </div>
       <div class="hero-frame">
         <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/ESCENCIA%20VEXPAR.png" alt="Esencia VEXPAR OPERACIONES">
         <span class="hero-frame-tag">Suministros especializados</span>
@@ -661,7 +669,10 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
     </div>
     <div class="contact-grid reveal">
       <div class="contact-info">
-        <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACA%202.png" alt="VEXPAR OPERACIONES">
+        <span class="plate-badge">
+          <img class="plate-bg" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACAS%203.avif" alt="">
+          <img class="plate-mark" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="VEXPAR OPERACIONES">
+        </span>
         <h3>VEXPAR OPERACIONES</h3>
         <p>Venta de suministros industriales especializados para los sectores energético, oil & gas, industrial y construcción, operando desde Irapuato, Guanajuato.</p>
         <div class="contact-detail"><div class="k">Correo</div><div class="v">contacto@vexpar.com.mx</div></div>
@@ -704,7 +715,10 @@ footer{background:var(--navy-950);color:rgba(247,245,240,.55);padding:64px 0 32p
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <img src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACA%202.png" alt="VEXPAR OPERACIONES">
+        <span class="plate-badge">
+          <img class="plate-bg" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/PLACAS%203.avif" alt="">
+          <img class="plate-mark" src="https://raw.githubusercontent.com/msaa0018-blip/btvxp/main/VEXPAR%20CON%20AURA%20BLANCA.png" alt="VEXPAR OPERACIONES">
+        </span>
         <p>Venta de suministros industriales especializados para los sectores energético, oil & gas, industrial y construcción.</p>
       </div>
       <div class="footer-col">
