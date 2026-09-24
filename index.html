@@ -155,6 +155,8 @@ body.menu-open .mobile-menu a.m-link:nth-of-type(6){transition-delay:.38s}
 .plate-badge .plate-bg{width:100%;height:100%;object-fit:fill;display:block}
 .plate-badge .plate-mark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:58%;width:auto;display:block}
 .hero-frame-logo .plate-badge{height:clamp(120px,20vw,225px)}
+.hero-frame-logo .plate-mark{filter:drop-shadow(0 0 18px rgba(255,255,255,.55)) drop-shadow(0 0 42px rgba(255,255,255,.3));animation:heroLogoGlow 3.2s ease-in-out infinite}
+@keyframes heroLogoGlow{0%,100%{filter:drop-shadow(0 0 14px rgba(255,255,255,.4)) drop-shadow(0 0 30px rgba(255,255,255,.2))}50%{filter:drop-shadow(0 0 22px rgba(255,255,255,.7)) drop-shadow(0 0 54px rgba(255,255,255,.4))}}
 .hero-badge{position:absolute;z-index:2;left:-26px;bottom:30px;background:var(--navy-950);border:1px solid var(--line-dark);padding:14px 18px;animation:floaty 5s ease-in-out infinite}
 .hero-badge img{height:44px;width:auto}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
